@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Procedimentos - Suporte</title>
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/procedimentos.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="color: var(--laranja); font-weight: bold;">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatos.html"><i class="bi bi-telephone"></i> Contatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="enderecos.html"><i class="bi bi-geo-alt"></i> Endereços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mapas.html"><i class="bi bi-map"></i> Mapas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acionamento.html"><i class="bi bi-megaphone"></i> Acionamento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="procedimentos.html"><i class="bi bi-journal-text"></i>
+                            Procedimentos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section" style="margin-top: 80px;">
+        <div class="container">
+            <h2 class="mb-4">Procedimentos</h2>
+
+            <!-- DER -->
+            <div class="card">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> DER - Departamento de Estradas de Rodagem
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('der')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-der" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento de Liberação de Veículos - DER</h5>
+
+                        <p>Para liberação do veículo é necessário entrar no site do DER. Siga estes passos:</p>
+                        <ol>
+                            <li>Pesquise no Google por “Liberação DER”.</li>
+                            <li>Clique em “Liberação de Veículo”.</li>
+                            <li>Depois em “Peticionamento Eletrônico” e siga as orientações do site.</li>
+                        </ol>
+
+                        <p>Logo abaixo haverá duas opções de vídeos para orientações:</p>
+                        <ul>
+                            <li>Como fazer o cadastro</li>
+                            <li>Como peticionar a liberação</li>
+                        </ul>
+
+                        <h6>Documentos necessários para solicitação:</h6>
+                        <ul>
+                            <li>Documento de apreensão (ARV) (Opcional)</li>
+                            <li>CRLV (Certificado de Registro e Licenciamento de Veículo)</li>
+                            <li>Cópia do documento de identificação do proprietário</li>
+                            <li>Documentos que comprovem a regularização do veículo</li>
+                        </ul>
+
+                        <p><strong>Para solicitação de retirada pelo condutor:</strong> é necessário o envio da cópia do
+                            documento de identificação do condutor.</p>
+
+                        <p><strong>Caso o responsável pela retirada não seja o proprietário ou o condutor:</strong></p>
+                        <ul>
+                            <li>Procuração assinada pelo proprietário com firma reconhecida em cartório, conforme modelo
+                                disponível no site do DER.</li>
+                        </ul>
+
+                        <p>Após o envio da solicitação com toda a documentação, haverá análise e emissão de Ofício de
+                            Liberação em até <strong>3 dias úteis</strong> (contados a partir do 1º dia útil
+                            subsequente).</p>
+                        <p><em>O envio de documentação incompleta acarretará a reabertura de um novo prazo de análise de
+                                3 dias úteis.</em></p>
+
+                        <h6>Valores</h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor km</th>
+                                    <th>Valor Recolha</th>
+                                    <th>Valor Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Leve</td>
+                                    <td>R$ 8,51</td>
+                                    <td>R$ 253,22</td>
+                                    <td>R$ 82,92</td>
+                                </tr>
+                                <tr>
+                                    <td>Pesado</td>
+                                    <td>R$ 16,66</td>
+                                    <td>R$ 463,86</td>
+                                    <td>R$ 248,77</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h6>Formas de Pagamento</h6>
+                        <ul>
+                            <li>PIX</li>
+                            <li>Boleto</li>
+                        </ul>
+
+                        <blockquote>
+                            “O veículo apreendido ou removido a qualquer título e não reclamado por seu proprietário
+                            dentro do prazo de sessenta dias, contado da data de recolhimento, será avaliado e levado a
+                            leilão, a ser realizado preferencialmente por meio eletrônico”
+                            — Art. 328 do Código de Trânsito Brasileiro.
+                        </blockquote>
+
+                        <h6>Horário de Atendimento do Setor de Liberações</h6>
+                        <p>Segunda a sexta-feira, das 8h às 17h.</p>
+                        <p><strong>Telefone:</strong> (11) 3311 1400 – Opção 2</p>
+
+                        <p>Mais informações:
+                            <a href="https://www.der.sp.gov.br/WebSite/Documentos/VeiculosRecolhidos.aspx"
+                                target="_blank">
+                                Clique Aqui.
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <!-- DETRAN -->
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> DETRAN - Departamento Estadual de Trânsito
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('detran')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-detran" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento de Liberação de Veículos - DETRAN</h5>
+
+                        <p><strong>Pague os débitos e taxas</strong></p>
+                        <p>
+                            Efetue o pagamento de todos os débitos do veículo e da taxa de estadia diária diretamente
+                            nos bancos conveniados (apenas correntistas), Casas Lotéricas ou Pix:
+                        </p>
+                        <ul>
+                            <li><strong>Débitos do veículo</strong> (multas, impostos e encargos pendentes): devem ser
+                                pagos informando o <strong>Renavam</strong> do veículo.</li>
+                            <li><strong>Estadia diária</strong>: deve ser paga informando o Renavam. Esta taxa contempla
+                                apenas o serviço de liberação do veículo: <strong>R$ 20,06</strong>.</li>
+                        </ul>
+
+                        <h6>Documentos necessários para solicitação:</h6>
+                        <ul>
+                            <li>Documento de identificação pessoal do proprietário do veículo - frente e verso.</li>
+                            <li>Termo de Recolhimento de Veículo (TRV).</li>
+                            <li>
+                                <em>Caso o TRV tenha sido extraviado</em>, o requerente deverá juntar declaração simples
+                                referente ao fato, subscrita pelo proprietário do veículo ou representante legal, cuja
+                                assinatura deverá coincidir com aquela constante no documento de identidade apresentado.
+                                <strong>Clique no botão abaixo para obter o modelo de declaração de extravio.</strong>
+                            </li>
+                            <li>Comprovante de pagamento de débitos do veículo (multas, impostos e encargos pendentes).
+                            </li>
+                        </ul>
+
+                        <p class="text-danger"><strong>Atenção:</strong> Todos os débitos existentes devem ser quitados
+                            antes da solicitação do serviço.</p>
+
+                        <h6>Documentação adicional para casos específicos:</h6>
+                        <p><strong>Veículo de pessoa física solicitado por procurador:</strong></p>
+                        <ul>
+                            <li>Documento de identificação pessoal do procurador - frente e verso.</li>
+                            <li>
+                                Procuração específica contendo a descrição do serviço e a identificação do veículo
+                                (marca, modelo e placa), por instrumento público (vigente) ou particular (com firma
+                                reconhecida).
+                                <strong>Clique no botão abaixo para obter o modelo de procuração.</strong>
+                            </li>
+                        </ul>
+
+                        <p>
+                            Após juntar todos esses documentos escaneados, entre no site do Detran para fazer a
+                            solicitação — todo o processo é online.
+                            Você pode buscar por "<strong>Liberação Detran</strong>" no Google ou acessar diretamente
+                            por este link:
+                            <a href="https://www.detran.sp.gov.br/" target="_blank">➡️ Liberação Detran</a> e seguir as
+                            instruções.
+                        </p>
+
+                        <p>Após confirmar a solicitação, aguarde o retorno do Detran-SP, que será feito por e-mail em
+                            até <strong>2 dias úteis</strong>. Verifique também a caixa de spam.</p>
+
+                        <h6>Valores</h6>
+                        <ul>
+                            <li>Taxa de estadia diária: <strong>R$ 40,72</strong></li>
+                            <li>Taxa de rebocamento: <strong>R$ 407,22</strong></li>
+                        </ul>
+
+                        <h6>Formas de Pagamento</h6>
+                        <ul>
+                            <li>PIX</li>
+                            <li>Boleto</li>
+                        </ul>
+
+                        <blockquote class="blockquote">
+                            “O veículo apreendido ou removido a qualquer título e não reclamado por seu proprietário
+                            dentro do prazo de sessenta dias, contado da data de recolhimento, será avaliado e levado a
+                            leilão, a ser realizado preferencialmente por meio eletrônico.”<br>
+                            — Art. 328 do Código de Trânsito Brasileiro
+                        </blockquote>
+
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-outline-secondary me-2" download>
+                                <i class="bi bi-file-earmark-arrow-down"></i> Extravio de CRR
+                            </a>
+                            <a href="#" class="btn btn-outline-secondary" download>
+                                <i class="bi bi-file-earmark-arrow-down"></i> Modelo de Procuração
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANTT -->
+<div class="card mt-3">
+    <div class="card-body d-flex justify-content-between align-items-center">
+        <h6 class="card-title m-0">
+            <i class="bi bi-folder2-open me-2"></i> ANTT – Agência Nacional de Transportes Terrestres
+        </h6>
+        <button class="btn-laranja btn-sm" onclick="toggleProcedimento('antt')">
+            <i class="bi bi-eye"></i>
+        </button>
+    </div>
+    <div id="procedimento-antt" class="toggle-content">
+        <div class="p-3">
+            <h5>LIBERAÇÃO ANTT – INSTRUÇÕES AO PROPRIETÁRIO</h5>
+
+            <p>Para que a ANTT autorize a liberação do veículo, o proprietário deverá arcar com as despesas relativas à remoção e guarda no pátio.</p>
+
+            <h6>Documentos necessários:</h6>
+            <p>Após o pagamento e emissão da nota fiscal, o proprietário deverá enviar um e-mail para 
+                <a href="mailto:liberacao@antt.gov.br" style="color: #007BFF; text-decoration: none;">liberacao@antt.gov.br</a> 
+                contendo os seguintes documentos digitalizados:
+            </p>
+            <ul>
+                <li>Nota fiscal dos serviços prestados (guincho e estadia);</li>
+                <li>Documento de identificação do proprietário;</li>
+                <li>CRLV (Certificado de Registro e Licenciamento do Veículo);</li>
+                <li>Bilhetes de passagem dos passageiros (quando aplicável);</li>
+                <li>Procuração (caso a solicitação seja feita por um representante).</li>
+            </ul>
+
+            <h6>Valores dos serviços:</h6>
+            <p><strong>Veículos com peso até 1.500 kg:</strong></p>
+            <ul>
+                <li>Guincho: <strong>R$ 263,06</strong></li>
+                <li>Adicional por km: <strong>R$ 6,80</strong></li>
+                <li>Estadia diária: <strong>R$ 60,71</strong></li>
+            </ul>
+
+            <p><strong>Veículos com peso acima de 1.500 kg:</strong></p>
+            <ul>
+                <li>Guincho: <strong>R$ 538,35</strong></li>
+                <li>Adicional por km: <strong>R$ 10,16</strong></li>
+                <li>Estadia diária: <strong>R$ 195,60</strong></li>
+            </ul>
+
+            <p class="text-danger"><strong>⚠️ Atenção:</strong> Caso haja diárias pendentes após a autorização da liberação, a diferença deverá ser paga no ato da retirada do veículo.</p>
+
+            <h6>Procedimento:</h6>
+            <ol>
+                <li>O proprietário deverá realizar o pagamento das despesas de remoção e estadia do veículo no pátio.</li>
+                <li>Após a confirmação do pagamento, será emitida a nota fiscal.</li>
+                <li>Com a nota fiscal em mãos, o proprietário deve enviar a documentação digitalizada por e-mail para solicitar a liberação.</li>
+                <li>Após análise dos documentos, a ANTT enviará um termo de liberação autorizando a retirada do veículo.</li>
+            </ol>
+
+            <p><strong>Importante:</strong> A liberação do veículo pela ANTT somente poderá ocorrer após o prazo mínimo de <strong>72 horas</strong> (3 dias) contados a partir da entrada do veículo no pátio. Antes desse prazo, mesmo com o pagamento e envio da documentação, a retirada não será autorizada.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea.
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleProcedimento(id) {
+            const el = document.getElementById(`procedimento-${id}`);
+            el.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>

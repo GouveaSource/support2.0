@@ -1,0 +1,64 @@
+:root {
+  --laranja: #F18407;
+  --preto: #000;
+  --branco: #fff;
+  --cinza-leve: #6c757d;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--preto);
+}
+
+.nav-link {
+  color: var(--laranja) !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: var(--laranja);
+  color: var(--branco) !important;
+}
+
+/* Cards principais */
+.card {
+  border-radius: 10px;
+  padding: 25px;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--preto);
+}
+
+/* Tabela */
+.table th {
+  background-color: var(--laranja);
+  color: var(--branco);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Pesquisas */
+.search-input {
+  max-width: 300px;
+}
+
+/* Telefones em cinza suave */
+.telefone {
+  color: var(--cinza-leve);
+}

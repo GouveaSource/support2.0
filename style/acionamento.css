@@ -1,0 +1,85 @@
+:root {
+    --laranja: #F18407;
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+    padding-bottom: 80px;
+}
+
+.navbar {
+    background-color: var(--preto);
+}
+
+.nav-link {
+    color: var(--laranja) !important;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover {
+    background-color: var(--laranja);
+    color: var(--branco) !important;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.card {
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-laranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+}
+
+.btn-laranja:hover {
+    background-color: #d46a00;
+}
+
+.hidden {
+    display: none;
+}

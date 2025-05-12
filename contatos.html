@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatos - Suporte</title>
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/contatos.css">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" style="color: var(--laranja); font-weight: bold;">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="contatos.html"><i class="bi bi-telephone"></i> Contatos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="enderecos.html"><i class="bi bi-geo-alt"></i> Endereços</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="mapas.html"><i class="bi bi-map"></i> Mapas</a></li>
+          <li class="nav-item"><a class="nav-link" href="acionamento.html"><i class="bi bi-megaphone"></i>
+              Acionamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="procedimentos.html"><i class="bi bi-journal-text"></i>
+              Procedimentos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main>
+    <div class="section" style="margin-top: 80px;">
+      <div class="container">
+        <div class="card">
+          <h2 class="text-center mb-4">Lista de Contatos</h2>
+          <div class="search-bar">
+            <input type="text" id="searchInput" class="form-control" placeholder="Digite para pesquisar...">
+          </div>
+
+          <table id="contactTable">
+            <thead>
+              <tr>
+                <th>Pátio</th>
+                <th>Telefone</th>
+                <th>Ramal</th>
+                <th>Administrador</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Araraquara</td>
+                <td>(14)99901-3004</td>
+                <td>227</td>
+                <td>Michel</td>
+                <td>
+                  <button class="icon-btn" onclick="copyContato(this)">
+                    <i class="bi bi-files" style="color: var(--laranja);"></i>
+                  </button>
+                  <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Barretos</td>
+                <td>(17) 99758-0285</td>
+                <td>107</td>
+                <td>Lidia</td>
+                <td>
+                  <button class="icon-btn" onclick="copyContato(this)">
+                    <i class="bi bi-files" style="color: var(--laranja);"></i>
+                  </button>
+                  <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Botucatu</td>
+                <td>(14)99728-8705</td>
+                <td>230</td>
+                <td>Ana</td>
+                <td>
+                  <button class="icon-btn" onclick="copyContato(this)">
+                    <i class="bi bi-files" style="color: var(--laranja);"></i>
+                  </button>
+                  <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Bolsão</td>
+                <td>(14)99778-4610</td>
+                <td>105</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Caraguatatuba</td>
+                <td>(14) 99857-3714</td>
+                <td>207</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Cerqueira Cesar</td>
+                <td>(14) 99707-9761</td>
+                <td>211</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Duartina</td>
+                <td>(14)99777-2850</td>
+                <td>231</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Guararapes</td>
+                <td>(17)99765-1474</td>
+                <td>206</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Jaú</td>
+                <td>(14)99747-3550</td>
+                <td>208</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Marilia</td>
+                <td>(14)99740-8643</td>
+                <td>204</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Matriz</td>
+                <td>(14)99762-3313</td>
+                <td>102</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Mirassol</td>
+                <td>(14)99849-4265</td>
+                <td>222</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Ourinhos</td>
+                <td>(14)99825-9303</td>
+                <td>104</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Presidente Prudente</td>
+                <td>(17)99753-0895</td>
+                <td>228</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Santana da Ponte Pensa</td>
+                <td>(14) 99648-1601</td>
+                <td>226</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>São José do Rio Preto</td>
+                <td>(17)99784-0491</td>
+                <td>212</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>São José dos Pinhais</td>
+                <td>(41)99963-0138</td>
+                <td>201</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>São Vicente</td>
+                <td>(14)99857-3641</td>
+                <td>232</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Serrana</td>
+                <td>(14)99136-5391</td>
+                <td>-</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Sorocaba</td>
+                <td>(15)99632-5535</td>
+                <td>225</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Teodoro Sampaio</td>
+                <td>(18)99711-2249</td>
+                <td>224</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+              <tr>
+                <td>Ubatuba</td>
+                <td>(12)99682-7480</td>
+                <td>108</td>
+                <td>Suporte</td>
+                <td><button class="icon-btn" onclick="copyContato(this)"><i class="bi bi-files"
+                      style="color: var(--laranja);"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Pesquisa em tempo real -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const contactTable = document.getElementById('contactTable');
+    const rows = contactTable.getElementsByTagName('tr');
+
+    searchInput.addEventListener('keyup', function () {
+      const searchText = this.value.toLowerCase();
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        let match = false;
+        for (let cell of cells) {
+          if (cell.textContent.toLowerCase().includes(searchText)) {
+            match = true;
+            break;
+          }
+        }
+        rows[i].style.display = match ? '' : 'none';
+      }
+    });
+  </script>
+
+  <!-- Função copiar contato -->
+  <script>
+    function copyContato(button) {
+      const row = button.closest('tr');
+      const patio = row.cells[0].textContent;
+      const telefone = row.cells[1].textContent;
+      const ramal = row.cells[2].textContent;
+      const admin = row.cells[3].textContent;
+
+      const texto = `Pátio: ${patio}\nTelefone: ${telefone}\nRamal: ${ramal}\nAdministrador: ${admin}`;
+
+      navigator.clipboard.writeText(texto).then(() => {
+        button.innerHTML = '<i class="bi bi-check-circle-fill" style="color: green;"></i>';
+
+        const span = button.nextElementSibling;
+        span.style.visibility = 'visible'; // mostra o texto sem alterar o layout
+
+        setTimeout(() => {
+          button.innerHTML = '<i class="bi bi-files" style="color: var(--laranja);"></i>';
+          span.style.visibility = 'hidden'; // oculta novamente sem deslocar
+        }, 5000);
+      });
+    }
+  </script>
+</body>
+
+</html>

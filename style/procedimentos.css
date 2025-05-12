@@ -1,0 +1,91 @@
+:root {
+    --laranja: #F18407;
+    --preto: #000000;
+    --branco: #ffffff;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .navbar {
+    background-color: var(--preto);
+  }
+
+  .nav-link {
+    color: var(--laranja) !important;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .nav-link:hover {
+    background-color: var(--laranja);
+    color: var(--branco) !important;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 1rem 1.25rem;
+    min-height: 0px; /* ↓ você pode ajustar aqui */
+  }
+  
+  .toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+
+  .toggle-content.show {
+    max-height: none;
+  }
+
+  .btn-laranja {
+    background-color: var(--laranja);
+    color: var(--branco);
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .btn-laranja:hover {
+    background-color: #d97305;
+    color: var(--branco);
+  }
+
+  footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }

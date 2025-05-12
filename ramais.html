@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ramais - Suporte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap + Ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/ramais.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" style="color: var(--laranja); font-weight: bold;">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="contatos.html"><i class="bi bi-telephone"></i> Contatos</a></li>
+        <li class="nav-item"><a class="nav-link" href="enderecos.html"><i class="bi bi-geo-alt"></i> Endereços</a></li>
+        <li class="nav-item"><a class="nav-link" href="mapas.html"><i class="bi bi-map"></i> Mapas</a></li>
+        <li class="nav-item"><a class="nav-link" href="pagina4.html"><i class="bi bi-megaphone"></i> Acionamento</a></li>
+        <li class="nav-item"><a class="nav-link" href="pagina5.html"><i class="bi bi-journal-text"></i> Procedimentos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Conteúdo Principal -->
+<div class="container">
+  <div class="row g-4">
+    <!-- Card Matriz -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <h2>Matriz</h2>
+        <!-- Campo de busca -->
+        <input type="text" class="form-control mb-3 search-input" placeholder="Buscar..." onkeyup="filterTable(this, 'matrizTable')">
+        <!-- Tabela de ramais da matriz -->
+        <div class="table-responsive">
+          <table class="table table-hover align-middle" id="matrizTable">
+            <thead>
+              <tr>
+                <th>Setor</th>
+                <th>Ramal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>CCO - Daiany</strong></td>
+                <td class="telefone">115</td>
+              </tr>
+              <tr>
+                <td><strong>CCO - Diana</strong></td>
+                <td class="telefone">109</td>
+              </tr>
+              <tr>
+                <td><strong>CCO - Raul</strong></td>
+                <td class="telefone">103</td>
+              </tr>
+              <tr>
+                <td><strong>CCO - Renata</strong></td>
+                <td class="telefone">102</td>
+              </tr>
+              <tr>
+                <td><strong>CCO - Atendente 1</strong></td>
+                <td class="telefone">101</td>
+              </tr>
+              <tr>
+                <td><strong>CCO - Atendente 2 </strong></td>
+                <td class="telefone">100</td>
+              </tr>
+              <tr>
+                <td><strong>Financeiro Renata</strong></td>
+                <td class="telefone">128</td>
+              </tr>
+              <tr>
+                <td><strong>Financeiro Rolli</strong></td>
+                <td class="telefone">209</td>
+              </tr>
+              <tr>
+                <td><strong>Isadora</strong></td>
+                <td class="telefone">218</td>
+              </tr>
+              <tr>
+                <td><strong>Juridico</strong></td>
+                <td class="telefone">116</td>
+              </tr>
+              <tr>
+                <td><strong>Leilão 1</strong></td>
+                <td class="telefone">215</td>
+              </tr>
+              <tr>
+                <td><strong>Leilão 2</strong></td>
+                <td class="telefone">216</td>
+              </tr>
+              <tr>
+                <td><strong>RH</strong></td>
+                <td class="telefone">123</td>
+              </tr>
+              <tr>
+                <td><strong>Marketing Herbert</strong></td>
+                <td class="telefone">127</td>
+              </tr>
+              <tr>
+                <td><strong>Monitoramento</strong></td>
+                <td class="telefone">200</td>
+              </tr>
+              <tr>
+                <td><strong>Presidente Fernando</strong></td>
+                <td class="telefone">119</td>
+              </tr>
+              <tr>
+                <td><strong>Sala Reunião</strong></td>
+                <td class="telefone">121</td>
+              </tr>
+              <tr>
+                <td><strong>Tecnico Fabio - Priscila</strong></td>
+                <td class="telefone">117</td>
+              </tr>
+              <tr>
+                <td><strong>TI</strong></td>
+                <td class="telefone">122</td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Pátios -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <h2>Pátios</h2>
+        <!-- Campo de busca -->
+        <input type="text" class="form-control mb-3 search-input" placeholder="Buscar..." onkeyup="filterTable(this, 'patiosTable')">
+        <!-- Tabela de ramais dos pátios -->
+        <div class="table-responsive">
+          <table class="table table-hover align-middle" id="patiosTable">
+            <thead>
+              <tr>
+                <th>Filial</th>
+                <th>Ramal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Patio Araraquara</strong></td>
+                <td class="telefone">227</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Barretos</strong></td>
+                <td class="telefone">107</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Botucatu</strong></td>
+                <td class="telefone">230</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Caraguatatuba</strong></td>
+                <td class="telefone">207</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Cerqueira</strong></td>
+                <td class="telefone">211</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Cabralia</strong></td>
+                <td class="telefone">211</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Guararapes</strong></td>
+                <td class="telefone">206</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Jau</strong></td>
+                <td class="telefone">208</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Marilia</strong></td>
+                <td class="telefone">204</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Mirassol</strong></td>
+                <td class="telefone">222</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Ourinhos</strong></td>
+                <td class="telefone">104</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Prudente</strong></td>
+                <td class="telefone">228</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Santana</strong></td>
+                <td class="telefone">226</td>
+              </tr>
+              <tr>
+                <td><strong>Patio São Vicente</strong></td>
+                <td class="telefone">232</td>
+              </tr>
+              <tr>
+                <td><strong>Patio São José do Rio Preto</strong></td>
+                <td class="telefone">212</td>
+              </tr>
+              <tr>
+                <td><strong>Patio São José dos Pinhais</strong></td>
+                <td class="telefone">201</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Sorocaba</strong></td>
+                <td class="telefone">225</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Teodoro Sampaio</strong></td>
+                <td class="telefone">224</td>
+              </tr>
+              <tr>
+                <td><strong>Patio Ubatuba</strong></td>
+                <td class="telefone">108</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para filtragem das tabelas -->
+<script>
+  function filterTable(input, tableId) {
+    const filter = input.value.toLowerCase();
+    const rows = document.querySelectorAll(`#${tableId} tbody tr`);
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(filter) ? '' : 'none';
+    });
+  }
+</script>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

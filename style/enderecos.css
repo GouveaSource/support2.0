@@ -1,0 +1,84 @@
+:root {
+  --laranja: #F18407;
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza: #6c757d;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.navbar {
+  background-color: var(--preto);
+}
+
+.nav-link {
+  color: var(--laranja) !important;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link:hover {
+  background-color: var(--laranja);
+  color: var(--branco) !important;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.card {
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#addressTable tbody tr:hover {
+  background-color: #f2f2f2;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--laranja);
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  color: #d46a00;
+}
+
+footer {
+  background-color: var(--preto);
+  color: var(--branco);
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
