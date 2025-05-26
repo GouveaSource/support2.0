@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acervo de Recados</title>
+
+  <!-- Google Fonts e Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+  <!-- Estilo -->
+  <style>
+    :root {
+      --laranja: #F18407;
+      --preto: #000000;
+      --branco: #ffffff;
+      --cinza: #6c757d;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--branco);
+      color: var(--preto);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100vw;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: var(--preto);
+      padding: 10px 20px;
+      position: relative;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .container {
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .voltar-inicio {
+      background: none;
+      color: var(--laranja) !important;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 8px 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      border: none;
+      transition: background 0.2s, color 0.2s;
+      position: static;
+    }
+
+    .voltar-inicio:hover {
+      background-color: var(--laranja);
+      color: var(--branco) !important;
+    }
+
+    .nav-link {
+      color: var(--laranja) !important;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 8px 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      background-color: var(--laranja);
+      color: var(--branco) !important;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 16px;
+      box-sizing: border-box;
+    }
+
+    .section {
+      padding: 60px 0;
+      flex: 1 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .recado-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .recado-postit {
+      background-color: #fff9c4; /* Amarelo pastel */
+      border: 1px solid #f0e68c;
+      box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: 'Poppins', sans-serif;
+      transition: transform 0.2s;
+    }
+
+    .recado-postit:hover {
+      transform: rotate(-1deg) scale(1.02);
+    }
+
+    .recado-data {
+      font-size: 0.8rem;
+      color: var(--cinza);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--preto);
+      color: var(--branco);
+      padding: 15px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container d-flex align-items-center">
+      <a href="index.html" class="voltar-inicio">
+        <i class="bi bi-arrow-left"></i> Voltar ao Início
+      </a>
+    </div>
+  </nav>
+
+  <!-- Seção de Recados -->
+  <section class="section">
+    <div class="container">
+      <h2>Acervo de Recados</h2>
+      <div class="recado-grid">
+
+        <!-- Recado 1 -->
+        <div class="recado-postit">
+          <div class="recado-data">Publicado em: 26/05/2025</div>
+          <p>Exemplo de futuros recados.</p>
+        </div>
+
+        <!-- Adicione mais recados conforme necessário -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea.
+  </footer>
+</body>
+</html>
