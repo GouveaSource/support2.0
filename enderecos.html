@@ -4,17 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Endereços - Suporte</title>
+  <title>Contatos - Suporte</title>
 
   <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/enderecos.css">
+
+  <style>
+
+  </style>
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
@@ -24,11 +27,15 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="contatos.html"><i class="bi bi-telephone"></i> Contatos</a></li>
-          <li class="nav-item"><a class="nav-link" href="enderecos.html"><i class="bi bi-geo-alt"></i> Endereços</a></li>
+          <li class="nav-item"><a class="nav-link" href="contatos.html"><i class="bi bi-telephone"></i> Contatos</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="enderecos.html"><i class="bi bi-geo-alt"></i> Endereços</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="mapas.html"><i class="bi bi-map"></i> Mapas</a></li>
-          <li class="nav-item"><a class="nav-link" href="acionamento.html"><i class="bi bi-megaphone"></i> Acionamento</a></li>
-          <li class="nav-item"><a class="nav-link" href="procedimentos.html"><i class="bi bi-journal-text"></i> Procedimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="acionamento.html"><i class="bi bi-megaphone"></i>
+              Acionamento</a></li>
+          <li class="nav-item"><a class="nav-link" href="procedimentos.html"><i class="bi bi-journal-text"></i>
+              Procedimentos</a></li>
         </ul>
       </div>
     </div>
@@ -37,109 +44,24 @@
   <!-- Conteúdo -->
   <main>
     <div class="section" style="margin-top: 80px;">
-      <div class="container">
-
-        <!-- Card com cabeçalho e pesquisa -->
+      <div class="container-fluid">
         <div class="card">
           <h2 class="text-center mb-4">Lista de Endereços</h2>
-
-          <!-- Barra de pesquisa -->
           <div class="search-bar">
             <input type="text" id="searchInput" class="form-control" placeholder="Digite para pesquisar...">
           </div>
 
-          <!-- Tabela -->
-          <table id="addressTable">
+          <table id="contactTable">
             <thead>
               <tr>
-                <th>Município</th>
+                <th>Pátio</th>
                 <th>Endereço</th>
                 <th>CEP</th>
-                <th>Referência</th>
+                <th>Referencia</th>
                 <th>Ações</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- Exemplo -->
-              <tr>
-                <td>São Paulo</td>
-                <td>Rua das Flores, 123</td>
-                <td>01010-000</td>
-                <td>Próximo ao metrô Sé</td>
-                <td>
-                  <!-- Botão copiar endereço -->
-                  <button class="icon-btn" onclick="copyAddress(this)">
-                    <i class="bi bi-files" style="color: var(--laranja);"></i>
-                  </button>
-                  <!-- Botão mapa (abre link manual) -->
-                  <a class="icon-btn" href="https://maps.google.com" target="_blank">
-                    <i class="bi bi-geo-alt-fill"></i>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Guarulhos</td>
-                <td>Avenida Central, 45</td>
-                <td>07000-000</td>
-                <td>Ao lado do shopping</td>
-                <td>
-                  <button class="icon-btn" onclick="copyAddress(this)">
-                    <i class="bi bi-files" style="color: var(--laranja);"   ></i>
-                  </button>
-                  <a class="icon-btn" href="https://maps.google.com" target="_blank">
-                    <i class="bi bi-geo-alt-fill"></i>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Guarulhos</td>
-                <td>Avenida Central, 45</td>
-                <td>07000-000</td>
-                <td>Ao lado do shopping</td>
-                <td>
-                  <button class="icon-btn" onclick="copyAddress(this)">
-                    <i class="bi bi-files" style="color: var(--laranja);"   ></i>
-                  </button>
-                  <a class="icon-btn" href="https://maps.google.com" target="_blank">
-                    <i class="bi bi-geo-alt-fill"></i>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Guarulhos</td>
-                <td>Avenida Central, 45</td>
-                <td>07000-000</td>
-                <td>Ao lado do shopping</td>
-                <td>
-                  <button class="icon-btn" onclick="copyAddress(this)">
-                    <i class="bi bi-files" style="color: var(--laranja);"   ></i>
-                  </button>
-                  <a class="icon-btn" href="https://maps.google.com" target="_blank">
-                    <i class="bi bi-geo-alt-fill"></i>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Guarulhos</td>
-                <td>Avenida Central, 45</td>
-                <td>07000-000</td>
-                <td>Ao lado do shopping</td>
-                <td>
-                  <button class="icon-btn" onclick="copyAddress(this)">
-                    <i class="bi bi-files" style="color: var(--laranja);"   ></i>
-                  </button>
-                  <a class="icon-btn" href="https://maps.google.com" target="_blank">
-                    <i class="bi bi-geo-alt-fill"></i>
-                  </a>
-                </td>
-              </tr>
-
-              <!-- Outros exemplos podem ser adicionados aqui -->
-            </tbody>
+            <tbody></tbody>
           </table>
 
         </div>
@@ -155,37 +77,229 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Pesquisa em tempo real -->
   <script>
-    const searchInput = document.getElementById('searchInput');
-    const addressTable = document.getElementById('addressTable');
-    const rows = addressTable.getElementsByTagName('tr');
-
-    searchInput.addEventListener('keyup', function () {
-      const searchText = this.value.toLowerCase();
-      for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        let match = false;
-        for (let cell of cells) {
-          if (cell.textContent.toLowerCase().includes(searchText)) {
-            match = true;
-            break;
-          }
-        }
-        rows[i].style.display = match ? '' : 'none';
+    const enderecos = [
+      {
+        patio: "Araraquara",
+        endereco: "Av. Dr. Waldomiro Blundi 54",
+        cep: "14807-422",
+        referencia: "Ao Lado Do Posto De Combustivel Do Bairro Yolanda Ópice",
+        mapa: "https://maps.app.goo.gl/VkzdRejp6KS4Uxaw8"
+      },
+      {
+        patio: "Avaré",
+        endereco: "Sp 255 Km 264 Zona Rural S/N",
+        cep: "18700-970",
+        referencia: "De frente com a InRoda",
+        mapa: "https://maps.app.goo.gl/dhHBZNQUZw1tACz36"
+      },
+      {
+        patio: "Barretos",
+        endereco: "Rua Altair Do Nascimento 850",
+        cep: "14783-152",
+        referencia: "Próximo à Mercedes Benz",
+        mapa: "https://maps.app.goo.gl/cnC8Mk346ZVRAWZg8"
+      },
+      {
+        patio: "Botucatu",
+        endereco: "Avenida Das Hortências 1703",
+        cep: "18605-258",
+        referencia: "-",
+        mapa: "https://maps.app.goo.gl/nCR5UbxJm1wWQ5He7"
+      },
+      {
+        patio: "Caraguatatuba",
+        endereco: "Rua Aríetes 100",
+        cep: "11675-680",
+        referencia: "Próximo à policia rodoviária",
+        mapa: "https://maps.app.goo.gl/uJH3cYCjRFRAMU8E8"
+      },
+      {
+        patio: "Cerqueira Cesar",
+        endereco: "Avenida João Cardoso de Oliveira 870",
+        cep: "18760-063",
+        referencia: "Ao Lado Do Haras Ramos",
+        mapa: "https://goo.gl/maps/hoRjHjehcePnUsuJA"
+      },
+      {
+        patio: "Duartina",
+        endereco: "Av. Áureliano Aredes - Cabrália Paulista - SP S/N",
+        cep: "17480-000",
+        referencia: "-",
+        mapa: "https://maps.app.goo.gl/fVDdsYkz3voWH8PGA"
+      },
+      {
+        patio: "Guararapes",
+        endereco: "Estrada Vicinal Natal Scatolin - Km 04 S/N - Corrego Nascente",
+        cep: "16700-000",
+        referencia: "Ao Lado Esquerdo Do Motel Liv",
+        mapa: "https://goo.gl/maps/uCSchwDjTZ5rFw3a9"
+      },
+      {
+        patio: "Francisco Morato",
+        endereco: "Estr. Mun. dos Porretes 938 - Jardim Florida",
+        cep: "07913-000",
+        referencia: "-",
+        mapa: "https://maps.app.goo.gl/bvMqu3uZyTZoyk9x8"
+      },
+      {
+        patio: "Jau",
+        endereco: "Av. Lourenço Neto De Almeida Prado 1031",
+        cep: "17213-710",
+        referencia: "Atrás Do Território Do Calçado",
+        mapa: "https://maps.app.goo.gl/xEGFfAuAGbShf8En7"
+      },
+      {
+        patio: "Marilia",
+        endereco: "Rod. Com. João Ribeiro De Barros Km464",
+        cep: "17519-780",
+        referencia: "Ao Lado Da Empresa Bananas Coreban",
+        mapa: "https://maps.app.goo.gl/aZAuKhEth87MSuQt5"
+      },
+      {
+        patio: "Mirassol",
+        endereco: "Av. Airton José Bilachi 3965",
+        cep: "15134-022",
+        referencia: "Próximo ao laboratório de alimentos Intertek Brasil",
+        mapa: "https://goo.gl/maps/8ChdzQtKAxVAKsHm7"
+      },
+      {
+        patio: "Ourinhos",
+        endereco: "Rua Mario de Oliveira Branco 150",
+        cep: "19902-640",
+        referencia: "Atras da Ouribram",
+        mapa: "https://goo.gl/maps/dzt6AecAoQnq99PW9"
+      },
+      {
+        patio: "Presidente Prudente",
+        endereco: "Rod. Assis Chateaubriand Km 459",
+        cep: "19053-680",
+        referencia: "Em Frente ao Angar Do Águia Da Policia Militar",
+        mapa: "https://goo.gl/maps/xtSSKJiV4do8pi1y8"
+      },
+      {
+        patio: "Bolsão",
+        endereco: "Rodovia Orlando Quagliato Km 10",
+        cep: "18900-000",
+        referencia: "Em frente ao Motel Vila Verde",
+        mapa: "https://maps.app.goo.gl/8ZshLEF8oa1CTcNd8"
+      },
+      {
+        patio: "Santana da Ponte Pensa",
+        endereco: "Rodovia Elzirio Martins Km 1/5 S/N",
+        cep: "15765-000",
+        referencia: "Perto Da Caixa Dagua Da Sabesp",
+        mapa: "https://maps.app.goo.gl/9j89ZXf4Jc4iku6M6"
+      },
+      {
+        patio: "São José do Rio Preto",
+        endereco: "Rua Felipe Assad Karam 300 - Est. Jockey Clube",
+        cep: "15081-517",
+        referencia: "Proxima A Mar&Rio Pescados",
+        mapa: "https://maps.app.goo.gl/kXvp1iL2ae3Wkz9H8"
+      },
+      {
+        patio: "São Vicente",
+        endereco: "Av. Martins Fontes 1118",
+        cep: "11390-200",
+        referencia: "Proximo a Pou-Cor industria de tintas",
+        mapa: "https://maps.app.goo.gl/DuG7De2nVsdbpAWdA"
+      },
+      {
+        patio: "Sorocaba",
+        endereco: "Estr. Ferrov. João De Oliveira 100. Ipanema Das Pedras",
+        cep: "18052-464",
+        referencia: "Ao Lado Da Pista De Carro",
+        mapa: "https://maps.app.goo.gl/TpNVQ9wuMZts2pFD6"
+      },
+      {
+        patio: "Tremembé",
+        endereco: "Estrada Três Cruzes 718 - Bairro Tremembé",
+        cep: "02285-000",
+        referencia: "-",
+        mapa: "https://maps.app.goo.gl/ZCAextKBL4K2jkmr6"
+      },
+      {
+        patio: "Teodoro Sampaio",
+        endereco: "Rodovia Arlindo Betio Km 01",
+        cep: "19280-000",
+        referencia: "Próximo Super Mercado Triunfo loja 2",
+        mapa: "https://maps.app.goo.gl/T5A9T7XxWamWXxeh7"
+      },
+      {
+        patio: "Ubatuba",
+        endereco: "Estrada Monte Valério 2300",
+        cep: "11691-400",
+        referencia: "300 Metros Após O Campo De Futebol",
+        mapa: "https://maps.app.goo.gl/rNJQRuAYgGiHZw9s5"
       }
-    });
-  </script>
+    ];
 
-  <!-- Função copiar endereço -->
-  <script>
-    function copyAddress(button) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const tbody = document.querySelector("#contactTable tbody");
+
+      enderecos.forEach(dado => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${dado.patio}</td>
+          <td data-endereco="${dado.endereco}">${dado.endereco.split(',')[0]}</td>
+          <td>${dado.cep}</td>
+          <td>${dado.referencia}</td>
+          <td>
+            <button class="icon-btn" onclick="abrirMapa(this)">
+              <i class="bi bi-geo-alt-fill" style="color: var(--laranja);"></i>
+            </button>
+            <button class="icon-btn" onclick="copyContato(this)">
+              <i class="bi bi-files" style="color: var(--laranja);"></i>
+            </button>
+            <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    });
+
+    function abrirMapa(button) {
       const row = button.closest('tr');
-      const addressText = row.cells[1].textContent;
-      navigator.clipboard.writeText(addressText).then(() => {
-        alert('Endereço copiado!');
+      const patio = row.cells[0].textContent;
+      const dado = enderecos.find(e => e.patio === patio);
+      if (dado && dado.mapa && dado.mapa !== "cole o link aqui") {
+        window.open(dado.mapa, '_blank');
+      } else {
+        alert('Link do mapa não cadastrado para este pátio.');
+      }
+    }
+
+    function copyContato(button) {
+      const row = button.closest('tr');
+      const patio = row.cells[0].textContent;
+      const endereco = row.cells[1].getAttribute('data-endereco');
+      const cep = row.cells[2].textContent;
+      const referencia = row.cells[3].textContent;
+
+      const texto = `Pátio: ${patio}\nEndereço: ${endereco}\nCEP: ${cep}\nReferência: ${referencia}`;
+
+      navigator.clipboard.writeText(texto).then(() => {
+        button.innerHTML = '<i class="bi bi-check-circle-fill" style="color: green;"></i>';
+        const span = button.nextElementSibling;
+        span.style.visibility = 'visible';
+        setTimeout(() => {
+          button.innerHTML = '<i class="bi bi-files" style="color: var(--laranja);"></i>';
+          span.style.visibility = 'hidden';
+        }, 5000);
       });
     }
+
+    document.getElementById('searchInput').addEventListener('keyup', function () {
+      const searchText = this.value.toLowerCase();
+      const rows = document.querySelectorAll('#contactTable tbody tr');
+      rows.forEach(row => {
+        const match = [...row.cells].some(cell =>
+          cell.textContent.toLowerCase().includes(searchText)
+        );
+        row.style.display = match ? '' : 'none';
+      });
+    });
   </script>
 </body>
 
