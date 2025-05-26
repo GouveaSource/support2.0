@@ -42,20 +42,23 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
+  font-size: 14px;
 }
 
 th,
 td {
-  padding: 12px;
+  padding: 10px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  font-size: 14px;
 }
 
 th {
   background-color: #f2f2f2;
 }
 
-#addressTable tbody tr:hover {
+#addressTable tbody tr:hover,
+#contactTable tbody tr:hover {
   background-color: #f2f2f2;
   transition: background-color 0.2s ease-in-out;
 }
