@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/acionamento.css">
+    <link rel="icon" type="image/x-icon" href="images/Logo_ico.ico">
 </head>
 
 <body>
@@ -42,9 +43,22 @@
 
                 <select class="form-select mb-4" id="patioSelect">
                     <option selected disabled>Selecione um Pátio</option>
-                    <option value="p1">PATIOS DER</option>
-                    <option value="p2">ARARAQUARA</option>
-                    <option value="p3">SOROCABA</option>
+                    <option value="p1">ARARAQUARA</option>
+                    <option value="p2">BARRETOS</option>
+                    <option value="p3">BARRINHA</option>
+                    <option value="p4">BOTUCATU</option>
+                    <option value="p5">CABRALIA</option>
+                    <option value="p6">CARAGUATATUBA</option>
+                    <option value="p7">CERQUEIRA CÉSAR</option>
+                    <option value="p8">DRACENA</option>
+                    <option value="p9">JAU</option>
+                    <option value="p10">MARILIA</option>
+                    <option value="p11">OURINHOS</option>
+                    <option value="p12">PRESIDENTE PRUDENTE</option>
+                    <option value="p13">S.J. DO RIO PRETO</option>
+                    <option value="p14">SOROCABA</option>
+                    <option value="p15">TEODORO SAMPAIO</option>
+                    <option value="p16">UBATUBA</option>
                 </select>
 
                 <!-- Pesquisa -->
@@ -52,171 +66,1379 @@
                     <input type="text" id="searchInput" class="form-control" placeholder="Digite para pesquisar...">
                 </div>
 
-                <!-- Tabelas por Pátio -->
-                <div id="tabelasContainer">
-                    <div id="p1" class="patio-table hidden">
-                        <h4>Pátio: PATIOSDER</h4>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Placa</th>
-                                    <th>Modelo</th>
-                                    <th>Cidades</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>João da Silva</td>
-                                    <td>111.222.333-44</td>
-                                    <td>ABC-1234</td>
-                                    <td>Fiat Uno</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalJoao">Ver Cidades</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="p2" class="patio-table hidden">
-                        <h4>Pátio: ARARAQUARA</h4>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Placa</th>
-                                    <th>Modelo</th>
-                                    <th>Cidades</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Maria Oliveira</td>
-                                    <td>555.666.777-88</td>
-                                    <td>XYZ-5678</td>
-                                    <td>Renault Kwid</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalMaria">Ver Cidades</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Maria Oliveira</td>
-                                    <td>555.666.777-88</td>
-                                    <td>XYZ-5678</td>
-                                    <td>Renault Kwid</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalMaria">Ver Cidades</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Joao Oliveira</td>
-                                    <td>555.666.777-88</td>
-                                    <td>XYZ-5678</td>
-                                    <td>Renault Kwid</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalMaria">Ver Cidades</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Maria Oliveira</td>
-                                    <td>555.666.777-88</td>
-                                    <td>XYZ-5678</td>
-                                    <td>Renault Kwid</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalMaria">Ver Cidades</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="p3" class="patio-table hidden">
-                        <h4>Pátio: SOROCABA</h4>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Placa</th>
-                                    <th>Modelo</th>
-                                    <th>Cidades</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Carlos Pereira</td>
-                                    <td>999.888.777-66</td>
-                                    <td>LMN-9012</td>
-                                    <td>Chevrolet Onix</td>
-                                    <td><button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalCarlos">Ver Cidades</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- Tabelas por Pátio == ARARAQUARA == -->
+                <div id="p1" class="patio-table hidden">
+                    <h4>ARARAQUARA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rafael Ganso</td>
+                                <td>200.649.028-11</td>
+                                <td>(16) 98812-2559</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasRafaelGanso">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalRafaelGanso">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ronaldo Salatino</td>
+                                <td>249.719.518-81</td>
+                                <td>(16) 99199-1824</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasRonaldoSalatino">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalRonaldoSalatino">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ricardo Aparecido Salatino</td>
+                                <td>167.049.278-83</td>
+                                <td>(16) 99186-9263</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasRicardoSalatino">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalRicardoSalatino">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+                <!-- Tabelas por Pátio == BARRETOS == -->
+                <div id="p2" class="patio-table hidden">
+                    <h4>BARRETOS</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rodrigo Roberto</td>
+                                <td>275.205.998-17</td>
+                                <td>(17) 99148-7768</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasRodrigoRoberto">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalRodrigoRoberto">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Luiz Fernando Norberto</td>
+                                <td>077.909.198-14</td>
+                                <td>(17) 99118-9548</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasLuizFernandoNorberto">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalLuizFernandoNorberto">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == BARRINHA == -->
+                <div id="p3" class="patio-table hidden">
+                    <h4>BARRINHA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <td>Abner Reuel Garbelini</td>
+                            <td>428.349.478-05</td>
+                            <td>(16) 99127-3132</td>
+                            <td>
+                                <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalPlacasAbner">
+                                    Ver Placas
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                    data-bs-target="#modalAbner">
+                                    Ver Cidades
+                                </button>
+                            </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == BOTUCATU == -->
+                <div id="p4" class="patio-table hidden">
+                    <h4>BOTUCATU</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Danilo Cesar Vianna</td>
+                                <td>273.366.878-14</td>
+                                <td>(14) 99618-7443</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasDaniloCesarVianna">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalDaniloCesarVianna">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Diogo Gomes de Carvalho</td>
+                                <td>310.361.378-48</td>
+                                <td>(14) 99842-1503</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasDiogo">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalDiogo">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gabriel Nunes da Silva</td>
+                                <td>358.325.208-07</td>
+                                <td>(14) 98809-9022</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasGabrielNunesDaSilva">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalGabrielNunesDaSilva">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lucas Javaro Rodrigues Lima</td>
+                                <td>465.942.968-76</td>
+                                <td>(14) 98809-9022</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasLucasJavaroRodriguesLima">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalLucasJavaroRodriguesLima">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fernando Antonio Modolo Zanluchi</td>
+                                <td>341.895.418-93</td>
+                                <td>(14) 99788-4307</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasFernandoAntonioModoloZanluchi">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalFernandoAntonioModoloZanluchi">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == CABRALIA == -->
+                <div id="p5" class="patio-table hidden">
+                    <h4>CABRÁLIA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Matheus Isaac Carvalho Goes</td>
+                                <td>429.763.198-98</td>
+                                <td>(14) 99692-7012</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasMatheusIsaacCarvalhoGoesGoes">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalMatheusIsaacCarvalhoGoesGoes">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Paulo Roberto Xavier da Silva</td>
+                                <td>171.757.368-19</td>
+                                <td>(14) 99794-8304</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasPauloRobertoXavierDaSilva">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPauloRobertoXavierDaSilva">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Claudemir Francisco</td>
+                                <td>180.893.908-54</td>
+                                <td>(14) 99657-2218</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasClaudemirFrancisco">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalClaudemirFrancisco">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fabiano Cesar Justo</td>
+                                <td>223.103.238-45</td>
+                                <td>(14) 99805-1795</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasFabianoCesarJusto">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalFabianoCesarJusto">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == CARAGUATATUBA == -->
+                <div id="p6" class="patio-table hidden">
+                    <h4>CARAGUATATUBA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Claudio Tavares Santos</td>
+                                <td>573.386.985-20</td>
+                                <td>(12) 98252-1433</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasClaudioTavaresSantos">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalClaudioTavaresSantos">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Raphael Mendes Bastos Melo</td>
+                                <td>428.554.738-45</td>
+                                <td>(12) 98210-7386</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasRaphaelMendesBastosMelo">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalRaphaelMendesBastosMelo">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == CERQUEIRA CÉSAR == -->
+                <div id="p7" class="patio-table hidden">
+                    <h4>CERQUEIRA CÉSAR</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paulo Lopes</td>
+                                <td>171.066.938-12</td>
+                                <td>(14) 99707-9761</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasPauloLopes">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPauloLopes">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == DRACENA == -->
+                <div id="p8" class="patio-table hidden">
+                    <h4>DRACENA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mario Jose da Rocha</td>
+                                <td>121.149.498-50</td>
+                                <td>(18) 99606-3129</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasMarioRocha">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalMarioRocha">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Marcos Antonio Ribeiro</td>
+                                <td>181.293.348-79</td>
+                                <td>(18) 99711-0330</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasMarcosRibeiro">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalMarcosRibeiro">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == JAÚ == -->
+                <div id="p9" class="patio-table hidden">
+                    <h4>JAÚ</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João Eduardo Moretti</td>
+                                <td>195.325.138-25</td>
+                                <td>(14) 99718-2750</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasJoaoEduardo">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalJoaoEduardo">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vagner Bueno Schmid</td>
+                                <td>299.645.568-10</td>
+                                <td>(14) 99684-0307</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasVagner">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalVagner">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Tabelas por Pátio == MARÍLIA == -->
+                <div id="p10" class="patio-table hidden">
+                    <h4>MARÍLIA</h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Motoristas</th>
+                                <th>Contato</th>
+                                <th>Reboque</th>
+                                <th>Cidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Guincho Classic</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalMotoristasGuinchoClassic">
+                                        Ver Motoristas
+                                    </button>
+                                </td>
+                                <td>(14) 99642-3404</td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalPlacasGuinchoClassic">
+                                        Ver Placas
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                        data-bs-target="#modalGuinchoClassic">
+                                        Ver Cidades
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </main>
 
-    <!-- Modais -->
-    <div class="modal fade" id="modalJoao" tabindex="-1" aria-hidden="true">
+    <!-- OUTROS -->
+     <div class="modal fade" id="modalMotoristasGuinchoClassic" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por João da Silva</h5>
+                <h5 class="modal-title">Motoristas Credenciados</h5>
                 <ul>
-                    <li>Cidade A</li>
-                    <li>Cidade B</li>
-                    <li>Cidade C</li>
-                    <li>Cidade D</li>
-                    <li>Cidade E</li>
-                    <li>Cidade F</li>
-                    <li>Cidade G</li>
-                    <li>Cidade H</li>
-                    <li>Cidade I</li>
-                    <li>Cidade J</li>
+                    <li>Joao</li>
+                    <li>Maria</li>
+                    <li>Pedro</li>
+                    <li>José</li>
+                    <li>Matheus</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalMaria" tabindex="-1" aria-hidden="true">
+
+
+    <!-- Modais cidades-->
+
+    <!-- ===================== MODAIS DE ARARAQUARA ===================== -->
+    <!-- Modal cidades de Rafael Ganso -->
+    <div class="modal fade" id="modalRafaelGanso" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por Maria Oliveira</h5>
+                <h5 class="modal-title">Cidades atendidas por Rafael Ganso</h5>
                 <ul>
-                    <li>Cidade K</li>
-                    <li>Cidade L</li>
-                    <li>Cidade M</li>
-                    <li>Cidade N</li>
-                    <li>Cidade O</li>
-                    <li>Cidade P</li>
-                    <li>Cidade Q</li>
-                    <li>Cidade R</li>
-                    <li>Cidade S</li>
-                    <li>Cidade T</li>
+                    <li>Américo Brasiliense</li>
+                    <li>Analândia</li>
+                    <li>Boa Esperança do Sul</li>
+                    <li>Bocaina</li>
+                    <li>Corumbataí</li>
+                    <li>Descalvado</li>
+                    <li>Dobrada</li>
+                    <li>Dourado</li>
+                    <li>Gavião Peixoto</li>
+                    <li>Guatapará</li>
+                    <li>Ibaté</li>
+                    <li>Ibitinga</li>
+                    <li>Matão</li>
+                    <li>Motuca</li>
+                    <li>Nova Europa</li>
+                    <li>Porto Ferreira</li>
+                    <li>Ribeirão Bonito</li>
+                    <li>Rincão</li>
+                    <li>Santa Lúcia</li>
+                    <li>São Carlos</li>
+                    <li>Tabatinga</li>
+                    <li>Trabiju</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalCarlos" tabindex="-1" aria-hidden="true">
+    <!-- Modal cidades de Ronaldo Salatino -->
+    <div class="modal fade" id="modalRonaldoSalatino" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por Carlos Pereira</h5>
+                <h5 class="modal-title">Cidades atendidas por Ronaldo Salatino</h5>
                 <ul>
-                    <li>Cidade U</li>
-                    <li>Cidade V</li>
-                    <li>Cidade W</li>
-                    <li>Cidade X</li>
-                    <li>Cidade Y</li>
-                    <li>Cidade Z</li>
-                    <li>Cidade AA</li>
-                    <li>Cidade BB</li>
-                    <li>Cidade CC</li>
-                    <li>Cidade DD</li>
+                    <li>Américo Brasiliense</li>
+                    <li>Analândia</li>
+                    <li>Boa Esperança do Sul</li>
+                    <li>Bocaina</li>
+                    <li>Corumbataí</li>
+                    <li>Descalvado</li>
+                    <li>Dobrada</li>
+                    <li>Dourado</li>
+                    <li>Gavião Peixoto</li>
+                    <li>Guatapará</li>
+                    <li>Ibaté</li>
+                    <li>Ibitinga</li>
+                    <li>Matão</li>
+                    <li>Motuca</li>
+                    <li>Nova Europa</li>
+                    <li>Porto Ferreira</li>
+                    <li>Ribeirão Bonito</li>
+                    <li>Rincão</li>
+                    <li>Santa Lúcia</li>
+                    <li>São Carlos</li>
+                    <li>Tabatinga</li>
+                    <li>Trabiju</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <!-- Modal cidades de Ricardo Aparecido Salatino -->
+    <div class="modal fade" id="modalRicardoSalatino" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Ricardo Aparecido Salatino</h5>
+                <ul>
+                    <li>Américo Brasiliense</li>
+                    <li>Analândia</li>
+                    <li>Boa Esperança do Sul</li>
+                    <li>Bocaina</li>
+                    <li>Corumbataí</li>
+                    <li>Descalvado</li>
+                    <li>Dobrada</li>
+                    <li>Dourado</li>
+                    <li>Gavião Peixoto</li>
+                    <li>Guatapará</li>
+                    <li>Ibaté</li>
+                    <li>Ibitinga</li>
+                    <li>Matão</li>
+                    <li>Motuca</li>
+                    <li>Nova Europa</li>
+                    <li>Porto Ferreira</li>
+                    <li>Ribeirão Bonito</li>
+                    <li>Rincão</li>
+                    <li>Santa Lúcia</li>
+                    <li>São Carlos</li>
+                    <li>Tabatinga</li>
+                    <li>Trabiju</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE BARRETOS ===================== -->
+    <!-- Modal cidades de Rodrigo Roberto -->
+    <div class="modal fade" id="modalRodrigoRoberto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Rodrigo Roberto</h5>
+                <ul>
+                    <li>Bebedouro</li>
+                    <li>Colina</li>
+                    <li>Colômbia</li>
+                    <li>Guaira</li>
+                    <li>Guaraci</li>
+                    <li>Ipuã</li>
+                    <li>Jaborandi</li>
+                    <li>Miguelópolis</li>
+                    <li>Monte Azul Paulista</li>
+                    <li>Morro Agudo</li>
+                    <li>Olimpia</li>
+                    <li>Severína</li>
+                    <li>Viradouro</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal cidades de Luiz Fernando Norberto -->
+    <div class="modal fade" id="modalLuizFernandoNorberto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Luiz Fernando Norberto</h5>
+                <ul>
+                    <li>Bebedouro</li>
+                    <li>Colina</li>
+                    <li>Colômbia</li>
+                    <li>Guaira</li>
+                    <li>Guaraci</li>
+                    <li>Ipuã</li>
+                    <li>Jaborandi</li>
+                    <li>Miguelópolis</li>
+                    <li>Monte Azul Paulista</li>
+                    <li>Morro Agudo</li>
+                    <li>Olimpia</li>
+                    <li>Severína</li>
+                    <li>Viradouro</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE BARRINHA ===================== -->
+    <!-- Modal cidades de Abner -->
+    <div class="modal fade" id="modalAbner" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Abner</h5>
+                <ul>
+                    <li>Barrinha</li>
+                    <li>Brodowski</li>
+                    <li>Cândido Rodrigues</li>
+                    <li>Dumont</li>
+                    <li>Guariba</li>
+                    <li>Guatapará</li>
+                    <li>Itápolis</li>
+                    <li>Jaboticabal</li>
+                    <li>Motuca</li>
+                    <li>Monte Alto</li>
+                    <li>Pitangueiras</li>
+                    <li>Pontal</li>
+                    <li>Santa Ernestina</li>
+                    <li>Sertãozinho</li>
+                    <li>Taiaçu</li>
+                    <li>Taiúva</li>
+                    <li>Taquaritinga</li>
+                    <li>Taquaral</li>
+                    <li>Vista Alegre</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE BOTUCATU ===================== -->
+    <!-- Modal cidades de Danilo Cesar Vianna -->
+    <div class="modal fade" id="modalDaniloCesarVianna" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Danilo Cesar Vianna</h5>
+                <ul>
+                    <li>Anhembi</li>
+                    <li>Areiópolis</li>
+                    <li>Barra Bonita</li>
+                    <li>Bofete</li>
+                    <li>Conchas</li>
+                    <li>Dois Córregos</li>
+                    <li>Igaraçu do Tietê</li>
+                    <li>Itatinga</li>
+                    <li>Lençóis Paulista</li>
+                    <li>Pardinho</li>
+                    <li>Porangaba</li>
+                    <li>Pratânia</li>
+                    <li>Santa Maria da Serra</li>
+                    <li>São Manuel</li>
+                    <li>Torre de Pedra</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Diogo -->
+    <div class="modal fade" id="modalDiogo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Diogo</h5>
+                <ul>
+                    <li>Anhembi</li>
+                    <li>Areiópolis</li>
+                    <li>Barra Bonita</li>
+                    <li>Bofete</li>
+                    <li>Conchas</li>
+                    <li>Dois Córregos</li>
+                    <li>Igaraçu do Tietê</li>
+                    <li>Itatinga</li>
+                    <li>Lençóis Paulista</li>
+                    <li>Pardinho</li>
+                    <li>Porangaba</li>
+                    <li>Pratânia</li>
+                    <li>Santa Maria da Serra</li>
+                    <li>São Manuel</li>
+                    <li>Torre de Pedra</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Gabriel Nunes da Silva -->
+    <div class="modal fade" id="modalGabrielNunesDaSilva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Gabriel Nunes da Silva</h5>
+                <ul>
+                    <li>Avaré</li>
+                    <li>Águas de Santa Bárbara</li>
+                    <li>Arandu</li>
+                    <li>Cerqueira César</li>
+                    <li>Iaras</li>
+                    <li>Itai</li>
+                    <li>Paranapanema</li>
+                    <li>Taquarituba</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Lucas Javaro Rodrigues Lima -->
+    <div class="modal fade" id="modalLucasJavaroRodriguesLima" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Lucas Javaro Rodrigues Lima</h5>
+                <ul>
+                    <li>Avaré</li>
+                    <li>Águas de Santa Bárbara</li>
+                    <li>Arandu</li>
+                    <li>Cerqueira César</li>
+                    <li>Iaras</li>
+                    <li>Itai</li>
+                    <li>Paranapanema</li>
+                    <li>Taquarituba</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal cidades de Fernando Antonio Modolo Zanluchi -->
+    <div class="modal fade" id="modalFernandoAntonioModoloZanluchi" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Fernando Antonio Modolo Zanluchi</h5>
+                <ul>
+                    <li>Anhembi</li>
+                    <li>Areiópolis</li>
+                    <li>Barra Bonita</li>
+                    <li>Bofete</li>
+                    <li>Conchas</li>
+                    <li>Dois Córregos</li>
+                    <li>Igaraçu do Tietê</li>
+                    <li>Itatinga</li>
+                    <li>Lençóis Paulista</li>
+                    <li>Pardinho</li>
+                    <li>Porangaba</li>
+                    <li>Pratânia</li>
+                    <li>Santa Maria da Serra</li>
+                    <li>São Manuel</li>
+                    <li>Torre de Pedra</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE CABRALIA ===================== -->
+    <!-- Modal cidades de Matheus Isaac Carvalho Goes Goes -->
+    <div class="modal fade" id="modalMatheusIsaacCarvalhoGoesGoes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Matheus Isaac Carvalho Goes</h5>
+                <ul>
+                    <li>Bauru</li>
+                    <li>Duartina</li>
+                    <li>Itapui</li>
+                    <li>Lenções Paulista</li>
+                    <li>Macatuba</li>
+                    <li>Paulistania</li>
+                    <li>Pirajui</li>
+                    <li>Agudos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Paulo Roberto Xavier da Silva -->
+    <div class="modal fade" id="modalPauloRobertoXavierDaSilva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Paulo Roberto Xavier da Silva</h5>
+                <ul>
+                    <li>Bauru</li>
+                    <li>Duartina</li>
+                    <li>Itapui</li>
+                    <li>Lenções Paulista</li>
+                    <li>Macatuba</li>
+                    <li>Paulistania</li>
+                    <li>Pirajui</li>
+                    <li>Agudos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Claudemir Francisco -->
+    <div class="modal fade" id="modalClaudemirFrancisco" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Claudemir Francisco</h5>
+                <ul>
+                    <li>Bauru</li>
+                    <li>Duartina</li>
+                    <li>Itapui</li>
+                    <li>Lenções Paulista</li>
+                    <li>Macatuba</li>
+                    <li>Paulistania</li>
+                    <li>Pirajui</li>
+                    <li>Agudos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Fabiano Cesar Justo -->
+    <div class="modal fade" id="modalFabianoCesarJusto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Fabiano Cesar Justo</h5>
+                <ul>
+                    <li>Bauru</li>
+                    <li>Agudos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE CARAGUATATUBA ===================== -->
+    <!-- Modal cidades de Claudio Tavares Santos -->
+    <div class="modal fade" id="modalClaudioTavaresSantos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Claudio Tavares Santos</h5>
+                <ul>
+                    <li>Caraguatatuba</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Raphael Mendes Bastos Melo -->
+    <div class="modal fade" id="modalRaphaelMendesBastosMelo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Raphael Mendes Bastos Melo</h5>
+                <ul>
+                    <li>Ilha Bela</li>
+                    <li>Jambeiro</li>
+                    <li>Paraibuna</li>
+                    <li>São Sebastião</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE CERQUEIRA ===================== -->
+    <!-- Modal cidades de Paulo Lopes -->
+    <div class="modal fade" id="modalPauloLopes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Paulo Lopes</h5>
+                <ul>
+                    <li>Avaré</li>
+                    <li>Águas de Santa Bárbara</li>
+                    <li>Arandu</li>
+                    <li>Cerqueira César</li>
+                    <li>Iaras</li>
+                    <li>Itai</li>
+                    <li>Paranapanema</li>
+                    <li>Taquarituba</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE DRACENA ===================== -->
+    <!-- Modal cidades de Mario Jose da Rocha -->
+    <div class="modal fade" id="modalMarioRocha" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Mario Jose da Rocha</h5>
+                <ul>
+                    <li>Dracena</li>
+                    <li>Flora Rica</li>
+                    <li>Irapuru</li>
+                    <li>Junqueiropolis</li>
+                    <li>Monte Castelo Santa Mercedes</li>
+                    <li>Nova Guataporanga</li>
+                    <li>Ouro Verde</li>
+                    <li>Pacaembu</li>
+                    <li>Panorama</li>
+                    <li>Pauliceia</li>
+                    <li>São João do Pau D'Alho</li>
+                    <li>Tupi Paulista</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Marcos Antonio Ribeiro -->
+    <div class="modal fade" id="modalMarcosRibeiro" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Marcos Antonio Ribeiro</h5>
+                <ul>
+                    <li>Adamantina</li>
+                    <li>Lucelia</li>
+                    <li>Oswaldo Cruz</li>
+                    <li>Inubia Paulista</li>
+                    <li>Salmourão</li>
+                    <li>Sagres</li>
+                    <li>Florida Paulista</li>
+                    <li>Mariopolis</li>
+                    <li>Pracinha</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE JAU ===================== -->
+    <!-- Modal cidades de João Eduardo Moretti -->
+    <div class="modal fade" id="modalJoaoEduardo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por João Eduardo Moretti</h5>
+                <ul>
+                    <li>Bariri</li>
+                    <li>Barra Bonita</li>
+                    <li>Bocaina</li>
+                    <li>Boracéia</li>
+                    <li>Dois Córregos</li>
+                    <li>Igaraçu do Tietê</li>
+                    <li>Itapuí</li>
+                    <li>Pederneiras</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de Vagner Bueno Schmid -->
+    <div class="modal fade" id="modalVagner" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Vagner Bueno Schmid</h5>
+                <ul>
+                    <li>Bariri</li>
+                    <li>Barra Bonita</li>
+                    <li>Bocaina</li>
+                    <li>Boracéia</li>
+                    <li>Dois Córregos</li>
+                    <li>Igaraçu do Tietê</li>
+                    <li>Itapuí</li>
+                    <li>Pederneiras</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modais placas-->
+
+    <!-- ===================== MODAIS DE PLACAS DE ARARAQUARA ===================== -->
+    <!-- Modal placas de Rafael Ganso -->
+    <div class="modal fade" id="modalPlacasRafaelGanso" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Rafael Ganso</h5>
+                <ul>
+                    <li>BKJ-2858 <span style='color: var(--cinza);'>(GL - VW 7.110S)</span></li>
+                    <li>BKP-3403 <span style='color: var(--cinza);'>(GL - VW 8.140)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Ronaldo Salatino -->
+    <div class="modal fade" id="modalPlacasRonaldoSalatino" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Ronaldo Salatino</h5>
+                <ul>
+                    <li>BKJ-2858 <span style='color: var(--cinza);'>(GL - VW 7.110S)</span></li>
+                    <li>BKP-3403 <span style='color: var(--cinza);'>(GL - VW 8.140)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Ricardo Aparecido Salatino -->
+    <div class="modal fade" id="modalPlacasRicardoSalatino" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Ricardo Aparecido Salatino</h5>
+                <ul>
+                    <li>BKJ-2858 <span style='color: var(--cinza);'>(GL - VW 7.110S)</span></li>
+                    <li>BKP-3403 <span style='color: var(--cinza);'>(GL - VW 8.140)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================== MODAIS DE PLACAS DE BARRETOS ===================== -->
+    <!-- Modal placas de Rodrigo Roberto -->
+    <div class="modal fade" id="modalPlacasRodrigoRoberto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Rodrigo Roberto</h5>
+                <ul>
+                    <li>FKR-3D50 <span style='color: var(--cinza);'>(GL - VW 10160)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Luiz Fernando Norberto -->
+    <div class="modal fade" id="modalPlacasLuizFernandoNorberto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Luiz Fernando Norberto</h5>
+                <ul>
+                    <li>AMV-3D91 <span style='color: var(--cinza);'>(GL - M.BENZ/915C)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE BARRINHA ===================== -->
+    <!-- Modal placas de Abner -->
+    <div class="modal fade" id="modalPlacasAbner" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Abner</h5>
+                <ul>
+                    <li>GAE-7H75<span style='color: var(--cinza);'> (GL - EXPRESS DRC 4X2)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE BOTUCATU ===================== -->
+    <!-- Modal placas de Danilo Cesar Vianna -->
+    <div class="modal fade" id="modalPlacasDaniloCesarVianna" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Danilo Cesar Vianna</h5>
+                <ul>
+                    <li>GWP-4B63 <span style='color: var(--cinza);'>(GL - FORD F250 XLT K)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Diogo Gomes de Carvalho -->
+    <div class="modal fade" id="modalPlacasDiogo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Diogo</h5>
+                <ul>
+                    <li>CWN-0A05 <span style='color: var(--cinza);'>(GL - M. BENZ 715C)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Gabriel Nunes da Silva -->
+    <div class="modal fade" id="modalPlacasGabrielNunesDaSilva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Gabriel Nunes da Silva</h5>
+                <ul>
+                    <li>KLO-7E23 <span style='color: var(--cinza);'>(GL - FORD F250 XL L)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Lucas Javaro Rodrigues Lima -->
+    <div class="modal fade" id="modalPlacasLucasJavaroRodriguesLima" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Lucas Javaro Rodrigues Lima</h5>
+                <ul>
+                    <li>BFN6725 <span style='color: var(--cinza);'>(GL - FORD F1000)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal placas de Fernando Antonio Modolo Zanluchi -->
+    <div class="modal fade" id="modalPlacasFernandoAntonioModoloZanluchi" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Fernando Antonio Modolo Zanluchi</h5>
+                <ul>
+                    <li>ELW-5G36 <span style='color: var(--cinza);'>(GP - VW 19.320 CLC TT)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE CABRALIA ===================== -->
+    <!-- Modal placas de Matheus Isaac Carvalho Goes Goes -->
+    <div class="modal fade" id="modalPlacasMatheusIsaacCarvalhoGoesGoes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Matheus Isaac Carvalho Goes </h5>
+                <ul>
+                    <li>EGJ-3E30 <span style='color: var(--cinza);'>(GL - FORD CARGO 815 E)</span></li>
+                    <li>ADE-5D17 <span style='color: var(--cinza);'>(GL - GM D20 CUSTOM)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Paulo Roberto Xavier da Silva -->
+    <div class="modal fade" id="modalPlacasPauloRobertoXavierDaSilva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Paulo Roberto Xavier da Silva</h5>
+                <ul>
+                    <li>LUP-3612 <span style='color: var(--cinza);'>(GL - VW 8.120 EURO3)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Claudemir Francisco -->
+    <div class="modal fade" id="modalPlacasClaudemirFrancisco" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Claudemir Francisco</h5>
+                <ul>
+                    <li>DUU-1A69 <span style='color: var(--cinza);'>(GL - VW 5.140E)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Fabiano Cesar Justo -->
+    <div class="modal fade" id="modalPlacasFabianoCesarJusto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Fabiano Cesar Justo</h5>
+                <ul>
+                    <li>DUN-1G58 <span style='color: var(--cinza);'>(VW 8.150E)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE CARAGUATATUBA ===================== -->
+    <!-- Modal placas de Claudio Tavares Santos -->
+    <div class="modal fade" id="modalPlacasClaudioTavaresSantos" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Claudio Tavares Santos</h5>
+                <ul>
+                    <li>FUT-1J00 <span style='color: var(--cinza);'>(GL - M. BENZ ACCELO 1016)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Raphael Mendes Bastos Melo -->
+    <div class="modal fade" id="modalPlacasRaphaelMendesBastosMelo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Raphael Mendes Bastos Melo</h5>
+                <ul>
+                    <li>CYN2H85 <span style='color: var(--cinza);'>(GL - VW 8.150)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE CERQUEIRA ===================== -->
+    <!-- Modal placas de Paulo Lopes -->
+    <div class="modal fade" id="modalPlacasPauloLopes" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Paulo Lopes</h5>
+                <ul>
+                    <li>BZH-4182 <span style='color: var(--cinza);'>(GL - VW E)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE DRACENA ===================== -->
+    <!-- Modal placas de Mario Jose da Rocha -->
+    <div class="modal fade" id="modalPlacasMarioRocha" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Mario Jose da Rocha</h5>
+                <ul>
+                    <li>EVF-1H56 <span style='color: var(--cinza);'>(M.BENZ ACELLO 1016)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Marcos Antonio Ribeiro -->
+    <div class="modal fade" id="modalPlacasMarcosRibeiro" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Marcos Antonio Ribeiro</h5>
+                <ul>
+                    <li>AQQ-3686 <span style='color: var(--cinza);'>(VW 8.150E Delivery)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE JAU ===================== -->
+    <!-- Modal placas de João Eduardo Moretti -->
+    <div class="modal fade" id="modalPlacasJoaoEduardo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de João Eduardo Moretti</h5>
+                <ul>
+                    <li>GWF-4B65 <span style='color: var(--cinza);'>(GL - SILVERADO D20)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Vagner Bueno Schmid -->
+    <div class="modal fade" id="modalPlacasVagner" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Vagner Bueno Schmid</h5>
+                <ul>
+                    <li>EGJ-3E30 <span style='color: var(--cinza);'>(VW 8.160 DRC)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     <!-- Footer -->
     <footer>
@@ -224,7 +1446,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
     <script>
         const patioSelect = document.getElementById("patioSelect");
         const tabelas = document.querySelectorAll(".patio-table");
