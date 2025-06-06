@@ -35,12 +35,11 @@
             </div>
         </div>
     </nav>
-
+    <!-- Seleções de Patios -->
     <main class="section" style="margin-top: 80px;">
         <div class="container">
             <div class="card">
                 <h2 class="text-center mb-4">Acionamento de Motoristas</h2>
-
                 <select class="form-select mb-4" id="patioSelect">
                     <option selected disabled>Selecione um Pátio</option>
                     <option value="p1">ARARAQUARA</option>
@@ -67,6 +66,7 @@
                     <input type="text" id="searchInput" class="form-control"
                         placeholder="Pesquisar motorista, placa, etc...">
                 </div>
+                <!-- Tabelas por Pátio -->
                 <div class="search-bar">
                     <!-- Tabelas por Pátio == ARARAQUARA == -->
                     <div id="p1" class="patio-table hidden">
@@ -640,7 +640,7 @@
                     </div>
                     <!-- Tabelas por Pátio == OURINHOS == -->
                     <div id="p11" class="patio-table hidden">
-                        <h4>EXEMPLO</h4>
+                        <h4>OURINHOS</h4>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -704,18 +704,23 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Jose Luiz da Silva Vieira</td>
-                                    <td>037.039.198-50</td>
-                                    <td>(18) 99606-3129</td>
+                                    <td>Anjo Azul</td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalReboqueVieira">
+                                            data-bs-target="#modalMotoristasAnjoAzul">
+                                            Ver Motoristas
+                                        </button>
+                                    </td>
+                                    <td>(18) 99127-3132</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalReboqueAnjoAzul">
                                             Ver Reboque
                                         </button>
                                     </td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalCidadesVieira">
+                                            data-bs-target="#modalCidadesAnjoAzul">
                                             Ver Cidades
                                         </button>
                                     </td>
@@ -755,39 +760,40 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Claudio Henrique Dela Pedra</td>
-                                    <td>097.510.738-04</td>
-                                    <td>(18) 99127-3132</td>
+                                    <td>Jose Luiz da Silva Vieira</td>
+                                    <td>037.039.198-50</td>
+                                    <td>(18) 99606-3129</td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalReboqueDelaPedra">
+                                            data-bs-target="#modalReboqueVieira">
                                             Ver Reboque
                                         </button>
                                     </td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalCidadesDelaPedra">
+                                            data-bs-target="#modalCidadesVieira">
                                             Ver Cidades
                                         </button>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Kleber Aparecido Teodoro</td>
-                                    <td>299.043.868-89</td>
-                                    <td>(18) 99684-0307</td>
+                                    <td>Vitor Henrique Schilipak Lima Sivla</td>
+                                    <td>107.054.899-57</td>
+                                    <td>(18) 98810-0233</td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalReboqueTeodoro">
+                                            data-bs-target="#modalReboqueVitorHenrique">
                                             Ver Reboque
                                         </button>
                                     </td>
                                     <td>
                                         <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
-                                            data-bs-target="#modalCidadesTeodoro">
+                                            data-bs-target="#modalCidadesVitorHenrique">
                                             Ver Cidades
                                         </button>
                                     </td>
                                 </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -830,11 +836,137 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- Tabelas por Pátio == S. J. do RIO PRETO == -->
+                    <div id="p14" class="patio-table hidden">
+                        <h4>SÃO JOSÉ DO RIO PRETO</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Contato</th>
+                                    <th>Reboque</th>
+                                    <th>Cidades</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Helio de Souza Guimaraes</td>
+                                    <td>017.281.208.69</td>
+                                    <td>(17) 99773-4641</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlacasHelio">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalCidadesHelio">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Valdir Simões da Silva</td>
+                                    <td>123.498.968-97</td>
+                                    <td>(17) 99719-9179</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlacasValdir">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalCidadesValdir">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Edemir Maciel Fuzzaro</td>
+                                    <td>222.830.978-86</td>
+                                    <td>(17) 99788-2225</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlacasEdemir">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalCidadesEdemir">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>João Paulo Fernandes Hidalgo</td>
+                                    <td>365.458.348-27</td>
+                                    <td>(17) 99195-7197</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlacasJoaoPauloHidalgo">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalCidadesJoaoPauloHidalgo">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Tabelas por Pátio == SOROCABA == -->
+                    <div id="p15" class="patio-table hidden">
+                        <h4>SOROCABA</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Contato</th>
+                                    <th>Reboque</th>
+                                    <th>Cidades</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Guincho Fafamil</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalMotoristasGuinchoFafamil">
+                                            Ver Motoristas
+                                        </button>
+                                    </td>
+                                    <td>(15) 99170-7641</td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalPlacasGuilherme">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#modalCidadesGuilherme">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
                 </div>
-            </div>
     </main>
 
-    <!-- OUTROS -->
+    <!-- EMPRESAS -->
     <!-- CLASSIC MARILIA -->
     <div class="modal fade" id="modalMotoristasGuinchoClassic" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -882,11 +1014,26 @@
             <div class="modal-content p-3">
                 <h5 class="modal-title">Motoristas Credenciados</h5>
                 <ul>
-                    <li>Huender Rogério Francisco</li>
-                    <li>Rosiani Rosimary de Oliveira</li>
-                    <li>Juraci Preto de Souza</li>
-                    <li>Rafael Neves Batista</li>
+                    <li>Huender Rogério Francisco<span style='color: var(--cinza);'>(158.130.548-63)</span></li>
+                    <li>Juraci Preto de Souza<span style='color: var(--cinza);'>(158.183.928-64)</span></li>
+                    <li>Rafael Neves Batista<span style='color: var(--cinza);'>(319.319.598-70)</span></li>
+                    <li>Rosiani Rosimary de Oliveira<span style='color: var(--cinza);'>(217.647.208-06)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <!-- CLASSIC PRUDENTE -->
+    <div class="modal fade" id="modalMotoristasAnjoAzul" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Motoristas Credenciados</h5>
+                <ul>
+                    <li>Claudio Henrique Dela Pedra <span style='color: var(--cinza);'>(097.510.738-04)</span></li>
+                    <li>Fabio Ferreira de Souza Lima <span style='color: var(--cinza);'>(321.677.578-08)</span></li>
+                    <li>Kleber Aparecido Teodoro <span style='color: var(--cinza);'>(299.043.868-89)</span></li>
+                    <li>Rodrigo Nonato De Almeida <span style='color: var(--cinza);'>(338.365.718-38)</span></li>
+                    <li>Willian Fortunato Dos Santos <span style='color: var(--cinza);'>(396.940.028-77)</span></li>
                 </ul>
             </div>
         </div>
@@ -999,6 +1146,7 @@
     </div>
 
     <!-- ===================== MODAIS DE BARRETOS ===================== -->
+
     <!-- Modal cidades de Rodrigo Roberto -->
     <div class="modal fade" id="modalRodrigoRoberto" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -1104,11 +1252,11 @@
         </div>
     </div>
 
-    <!-- Modal cidades de Diogo -->
+    <!-- Modal cidades de Diogo Gomes de Carvalho -->
     <div class="modal fade" id="modalDiogo" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por Diogo</h5>
+                <h5 class="modal-title">Cidades atendidas por Diogo Gomes de Carvalho</h5>
                 <ul>
                     <li>Anhembi</li>
                     <li>Areiópolis</li>
@@ -1527,7 +1675,6 @@
                     <li>Caiuá</li>
                     <li>Marabá Paulista</li>
                     <li>Piquerobi</li>
-                    <li>Presidente Epitácio</li>
                     <li>Presidente Venceslau</li>
                     <li>Ribeirão dos Índios</li>
                     <li>Santo Anastácio</li>
@@ -1551,11 +1698,11 @@
         </div>
     </div>
 
-    <!-- Modal Cidades – Claudio Dela Pedra -->
-    <div class="modal fade" id="modalCidadesDelaPedra" tabindex="-1" aria-hidden="true">
+    <!-- Modal Cidades – Anjo Azul -->
+    <div class="modal fade" id="modalCidadesAnjoAzul" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por Claudio Henrique Dela Pedra</h5>
+                <h5 class="modal-title">Cidades atendidas por Anjo Azul</h5>
                 <ul>
                     <li>Alfredo Marcondes</li>
                     <li>Álvares Machado</li>
@@ -1578,32 +1725,23 @@
         </div>
     </div>
 
-    <!-- Modal Cidades – Kleber Aparecido Teodoro -->
-    <div class="modal fade" id="modalCidadesTeodoro" tabindex="-1" aria-hidden="true">
+    <!-- Modal Cidades – Vitor -->
+    <div class="modal fade" id="modalCidadesVitorHenrique" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Cidades atendidas por Kleber Aparecido Teodoro</h5>
+                <h5 class="modal-title">Cidades atendidas por Vitor Henrique</h5>
                 <ul>
-                    <li>Alfredo Marcondes</li>
-                    <li>Álvares Machado</li>
-                    <li>Indiana</li>
-                    <li>Santo Expedito</li>
-                    <li>Taciba</li>
-                    <li>Anhumas</li>
-                    <li>Caiabu</li>
-                    <li>Pirapozinho</li>
-                    <li>Presidente Bernardes</li>
-                    <li>Emilianópolis</li>
-                    <li>Martinópolis</li>
-                    <li>Narandiba</li>
-                    <li>Regente Feijó</li>
-                    <li>Tarabai</li>
-                    <li>Estrela do Norte</li>
-                    <li>Sandovalina</li>
+                    <li>Presidente Epitácio</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <!-- ===================== MODAIS DE SOROCABA ===================== -->
+
+
+
+
 
     <!-- ===================== MODAIS DE PRESIDENTE PRUDENTE ===================== -->
     <!-- Modal Cidades – Oliveira Guinchos -->
@@ -1644,6 +1782,93 @@
         </div>
     </div>
 
+    <!-- ===================== MODAIS DE S. J. RIO PRETO ===================== -->
+    <!-- Helio -->
+    <div class="modal fade" id="modalCidadesHelio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Helio de Souza Guimaraes</h5>
+                <ul>
+                    <li>São José R. Preto</li>
+                    <li>Monte Aprazível</li>
+                    <li>Ipiguá</li>
+                    <li>Mirassolândia</li>
+                    <li>Macaubal</li>
+                    <li>Bálsamo</li>
+                    <li>Bady Bassitt</li>
+                    <li>Catiguá</li>
+                    <li>Cosmorama</li>
+                    <li>Embaúba</li>
+                    <li>Engenheiro Schmitt</li>
+                    <li>General Salgado</li>
+                    <li>Icém</li>
+                    <li>Itajobi</li>
+                    <li>Nhandeara</li>
+                    <li>Novais</li>
+                    <li>Nipuã</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Valdir -->
+    <div class="modal fade" id="modalCidadesValdir" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Valdir Simões da Silva</h5>
+                <ul>
+                    <li>São José R. Preto</li>
+                    <li>Monte Aprazível</li>
+                    <li>Ipiguá</li>
+                    <li>Mirassolândia</li>
+                    <li>Macaubal</li>
+                    <li>Bálsamo</li>
+                    <li>Bady Bassitt</li>
+                    <li>Catiguá</li>
+                    <li>Cosmorama</li>
+                    <li>Embaúba</li>
+                    <li>Engenheiro Schmitt</li>
+                    <li>General Salgado</li>
+                    <li>Icém</li>
+                    <li>Itajobi</li>
+                    <li>Nhandeara</li>
+                    <li>Novais</li>
+                    <li>Nipuã</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edemir -->
+    <div class="modal fade" id="modalCidadesEdemir" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Edemir Maciel Fuzzaro</h5>
+                <ul>
+                    <li>Cedral</li>
+                    <li>Guapiaçu</li>
+                    <li>Uchoa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Joao Hidalgo -->
+    <div class="modal fade" id="modalCidadesJoaoPauloHidalgo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Edemir Maciel Fuzzaro</h5>
+                <ul>
+                    <li>Cedral</li>
+                    <li>Guapiaçu</li>
+                    <li>Uchoa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
 
 
 
@@ -1657,7 +1882,7 @@
                 <h5 class="modal-title">Placas e Modelos de Rafael Ganso</h5>
                 <ul>
                     <li>BKJ-2858 <span style='color: var(--cinza);'>(GL - VW 7.110S)</span></li>
-                    <li>BKP-3403 <span style='color: var(--cinza);'>(GL - VW 8.140)</span></li>
+                    <li>BKP-340
                 </ul>
             </div>
         </div>
@@ -1691,7 +1916,9 @@
 
 
     <!-- ===================== MODAIS DE PLACAS DE BARRETOS ===================== -->
+
     <!-- Modal placas de Rodrigo Roberto -->
+
     <div class="modal fade" id="modalPlacasRodrigoRoberto" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
@@ -1984,6 +2211,7 @@
     </div>
 
     <!-- ===================== MODAIS DE PLACAS DE PRESIDENTE PRUDENTE ===================== -->
+
     <!-- Modal Reboque – Vieira -->
     <div class="modal fade" id="modalReboqueVieira" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -2020,11 +2248,11 @@
         </div>
     </div>
 
-    <!-- Modal Reboque – Claudio Dela Pedra -->
-    <div class="modal fade" id="modalReboqueDelaPedra" tabindex="-1" aria-hidden="true">
+    <!-- Modal Reboque – Anjo Azul -->
+    <div class="modal fade" id="modalReboqueAnjoAzul" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Reboque de Claudio Henrique Dela Pedra</h5>
+                <h5 class="modal-title">Reboque de Anjo Azul</h5>
                 <ul>
                     <li>ARP-6598 <span style="color: var(--cinza);">(FORD CARGO 815)</span></li>
                     <li>PEQ-4C37 <span style="color: var(--cinza);">(VW 13.180)</span></li>
@@ -2034,19 +2262,20 @@
         </div>
     </div>
 
-    <!-- Modal Reboque – Kleber Teodoro -->
-    <div class="modal fade" id="modalReboqueTeodoro" tabindex="-1" aria-hidden="true">
+    <!-- Modal Reboque – Vitor Henrique -->
+    <div class="modal fade" id="modalReboqueVitorHenrique" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content p-3">
-                <h5 class="modal-title">Reboque de Kleber Aparecido Teodoro</h5>
+                <h5 class="modal-title">Reboque de Vitor Henrique</h5>
                 <ul>
-                    <li>ARP-6598 <span style="color: var(--cinza);">(FORD CARGO 815)</span></li>
-                    <li>EJC-6394 <span style="color: var(--cinza);">(VW 8.120 EURO3)</span></li>
-                    <li>EVU-4266 <span style="color: var(--cinza);">(FORD CARGO 816 S)</span></li>
+                    <li>DHX-0C15 <span style="color: var(--cinza);">(FORD F4000G)</span></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <!-- ===================== MODAIS DE PLACAS DE SOROCABA ===================== -->
+
 
 
     <!-- ===================== MODAIS DE PLACAS DE SANTANA ===================== -->
@@ -2065,6 +2294,53 @@
         </div>
     </div>
 
+    <!-- ===================== MODAIS DE PLACAS DE S.J. DO RIO PRETO ===================== -->
+    <!-- Helio -->
+    <div class="modal fade" id="modalPlacasHelio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Helio de Souza Guimaraes</h5>
+                <ul>
+                    <li>AKH-6211 <span style="color: var(--cinza);">(GL - M. BENZ 710)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Valdir -->
+    <div class="modal fade" id="modalPlacasValdir" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Valdir Simões da Silva</h5>
+                <ul>
+                    <li>NFG-5909 <span style="color: var(--cinza);">(GL - VW 8.150)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edemir -->
+    <div class="modal fade" id="modalPlacasEdemir" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de Edemir Maciel Fuzzaro</h5>
+                <ul>
+                    <li>GHJ8E00 <span style="color: var(--cinza);">(GL - FORD CARGO 1119)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- João Paulo Hidalgo -->
+    <div class="modal fade" id="modalPlacasJoaoPauloHidalgo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos de João Paulo Hidalgo</h5>
+                <ul>
+                    <li>GHJ8E00 <span style="color: var(--cinza);">(GL - FORD CARGO 1119)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Footer -->
