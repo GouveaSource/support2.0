@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Procedimentos - Suporte</title>
 
-    <!-- Bootstrap CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 </head>
 
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html" style="color: var(--laranja); font-weight: bold;">Inicio</a>
@@ -49,7 +47,6 @@
         <div class="container">
             <h2 class="mb-4">Procedimentos</h2>
 
-            <!-- DER -->
             <div class="card">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h6 class="card-title m-0">
@@ -152,7 +149,6 @@
                     </div>
                 </div>
             </div>
-            <!-- DETRAN -->
             <div class="card mt-3">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <h6 class="card-title m-0">
@@ -250,8 +246,7 @@
                 </div>
             </div>
 
-            <!-- ANTT -->
-<div class="card mt-3">
+            <div class="card mt-3">
     <div class="card-body d-flex justify-content-between align-items-center">
         <h6 class="card-title m-0">
             <i class="bi bi-folder2-open me-2"></i> ANTT – Agência Nacional de Transportes Terrestres
@@ -302,6 +297,7 @@
                 <li>Após a confirmação do pagamento, será emitida a nota fiscal.</li>
                 <li>Com a nota fiscal em mãos, o proprietário deve enviar a documentação digitalizada por e-mail para solicitar a liberação.</li>
                 <li>Após análise dos documentos, a ANTT enviará um termo de liberação autorizando a retirada do veículo.</li>
+                <li>O proprietário deverá realizar o pagamento das despesas de remoção e estadia do veículo no pátio. </li>
             </ol>
 
             <p><strong>Importante:</strong> A liberação do veículo pela ANTT somente poderá ocorrer após o prazo mínimo de <strong>72 horas</strong> (3 dias) contados a partir da entrada do veículo no pátio. Antes desse prazo, mesmo com o pagamento e envio da documentação, a retirada não será autorizada.</p>
@@ -309,18 +305,461 @@
     </div>
 </div>
 
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM e SEMOB - São Vicente
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-sv')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-sv" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - São Vicente</h5>
+                        <p><strong>Telefone:</strong> (13) 3561-5350 </p>
+                        <p><strong>Procedimento:</strong> Somente pessoalmente, o proprietário do veículo deverá ir até a Rua General Etchegoyen, 40, Vila Cascatinha (próximo ao antigo prédio da prefeitura), munido com os documentos pessoais e fazer a solicitação do ofício de liberação. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 3,28</td>
+                                    <td>R$ 328,00</td>
+                                    <td>R$ 32,80</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 3,53</td>
+                                    <td>R$ 353,00</td>
+                                    <td>R$ 35,30</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 6,50</td>
+                                    <td>R$ 650,00</td>
+                                    <td>R$ 65,00</td>
+                                </tr>
+                                <tr>
+                                    <td>BICICLETA</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 8,83</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM, SEMOB e URBES - Sorocaba
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-sorocaba')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-sorocaba" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Sorocaba</h5>
+                        <p><strong>Telefone:</strong> (15) 3519-3101 </p>
+                        <p><strong>Procedimento:</strong> Pessoalmente ou por e-mail, o proprietário poderá ir até a Rua Professor Dirceu Ferreira da Silva, 55, Alto da Boa Vista, ou por e-mail guincho.semob@sorocaba.sp.gov.br, deverá levar os documentos pessoais ou anexar no e-mail. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 89,00</td>
+                                    <td>R$ 36,96</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 91,51</td>
+                                    <td>R$ 36,96</td>
+                                </tr>
+                                <tr>
+                                    <td>MÉDIO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 350,00</td>
+                                    <td>R$ 53,77</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 494,18</td>
+                                    <td>R$ 71,17</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM e SEMOB - Araraquara
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-araraquara')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-araraquara" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Araraquara</h5>
+                        <p><strong>Telefone:</strong> (16) 99798-5508 </p>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir até a Avenida Bento de Abreu, 1172, Jardim Primavera, com seus documentos pessoais e solicitar o ofício de liberação. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM - Barretos
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-barretos')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-barretos" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Barretos</h5>
+                        <p><strong>Telefone:</strong> (17) 98118-2287 </p>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com o DOCUMENTO DO VEICULO EM DIA na Rua: 30, 0506- Bairro Marilia- Barretos. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM e SEMOB - Ubatuba
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-ubatuba')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-ubatuba" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Ubatuba</h5>
+                        <p><strong>Telefone:</strong> Somente pessoalmente </p>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo direto na secretaria de mobilidade que fica na Rua Dona Maria Alves, 958 Bairro: Umuarama- UBATUBA. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM - Botucatu
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-botucatu')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-botucatu" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Botucatu</h5>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo na Rua Ati, 145, Vila dos lavradores. Logo será possível solicitar pelo site gcm@botucatu.sp.gov.br. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 144,00</td>
+                                    <td>R$ 29,18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM - Francisco Morato
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-francisco-morato')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-francisco-morato" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Francisco Morato</h5>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo na Rua Manoel Vilaboim, 266 (ao lado da delegacia civil). </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 447,30</td>
+                                    <td>R$ 46,68</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 466,75</td>
+                                    <td>R$ 44,74</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 700,13</td>
+                                    <td>R$ 70,02</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM - Ourinhos
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-ourinhos')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-ourinhos" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Ourinhos</h5>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo na Rua Silva Jardim, 164, ofício feito somente na secretaria. </p>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 5,65</td>
+                                    <td>R$ 394,20</td>
+                                    <td>R$ 55,03</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 5,65</td>
+                                    <td>R$ 394,20</td>
+                                    <td>R$ 55,03</td>
+                                </tr>
+                                <tr>
+                                    <td>CAMINHÃO</td>
+                                    <td>R$ 11,06</td>
+                                    <td>R$ 750,14</td>
+                                    <td>R$ 165,08</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="card-title m-0">
+                        <i class="bi bi-folder2-open me-2"></i> GCM - Prudente
+                    </h6>
+                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm-prudente')">
+                        <i class="bi bi-eye"></i>
+                    </button>
+                </div>
+                <div id="procedimento-gcm-prudente" class="toggle-content">
+                    <div class="p-3">
+                        <h5>Procedimento para liberação de veículos municipais - Prudente</h5>
+                        <p><strong>Telefone:</strong> (18) 3399-1100 </p>
+                        <p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo até o ATENDE PRUDENTE, na Rua Mal. Floriano Peixoto, 342, Vila Marcondes. </p>
+                        <h6>Documentos - Pessoa Física:</h6>
+                        <ul>
+                            <li>Proprietário ou procurador (apresentar doc. de identidade). </li>
+                            <li>Documento do veículo a CRLV ATUAL. </li>
+                            <li>Pagamento de multas obrigatórias. </li>
+                            <li>Condutor habilitado para retirar o veiculo ou remoção por guincho. </li>
+                        </ul>
+                        <h6>Documentos - Pessoa Jurídica:</h6>
+                        <ul>
+                            <li>Diretor, gerente ou procurador (apresentar doc. de identidade). </li>
+                            <li>Copia autenticada do contrato social. </li>
+                            <li>Documentos do veículo: CRLV ATUAL e CRV em BRANCO. </li>
+                            <li>Pagamento de multas obrigatórias. </li>
+                            <li>Condutor habilitado para retirar o veículo ou remoção por guincho. </li>
+                            <li>Apresentar a documentação informada no Atende Prudente. </li>
+                        </ul>
+                        <h6>Valores </h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor/KM</th>
+                                    <th>Valor/Recolha</th>
+                                    <th>Valor/Estadia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MOTO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                                <tr>
+                                    <td>CARRO</td>
+                                    <td>R$ 0,00</td>
+                                    <td>R$ 407,22</td>
+                                    <td>R$ 40,72</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea.
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function toggleProcedimento(id) {
