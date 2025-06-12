@@ -354,393 +354,43 @@
             <!-- GCM / SEMOB / URBES - Consolidado -->
             <div class="card mt-3">
                 <div class="card-body d-flex justify-content-between align-items-center">
-                    <h6 class="card-title mb-0"><i class="bi bi-folder2-open me-2"></i> GCM / SEMOB / URBES -
-                        Procedimentos Municipais</h6>
-                    <button class="btn-laranja btn-sm" onclick="toggleProcedimento('gcm')">
-                        <i class="bi bi-eye"></i>
+                    <h6 class="card-title mb-0"><i class="bi bi-folder2-open me-2"></i> GCM / SEMOB / URBES - Procedimentos Municipais</h6>
+                    <button class="btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalCidadesGcm">
+                        <i class="bi bi-geo-alt"></i> Ver cidades
                     </button>
                 </div>
-                <div id="procedimento-gcm" class="toggle-content">
-                    <div class="gcm-grid mt-3">
-                        <button class="gcm-button" onclick="toggleGcm('araraquara')">Araraquara</button>
-                        <button class="gcm-button" onclick="toggleGcm('barretos')">Barretos</button>
-                        <button class="gcm-button" onclick="toggleGcm('botucatu')">Botucatu</button>
-                        <button class="gcm-button" onclick="toggleGcm('morato')">Francisco Morato</button>
-                        <button class="gcm-button" onclick="toggleGcm('ourinhos')">Ourinhos</button>
-                        <button class="gcm-button" onclick="toggleGcm('prudente')">Pres. Prudente</button>
-                        <button class="gcm-button" onclick="toggleGcm('sv')">São Vicente</button>
-                        <button class="gcm-button" onclick="toggleGcm('sorocaba')">Sorocaba</button>
-                        <button class="gcm-button" onclick="toggleGcm('ubatuba')">Ubatuba</button>
+            </div>
+            <!-- Modal de cidades GCM/SEMOB/URBES -->
+            <div class="modal fade" id="modalCidadesGcm" tabindex="-1" aria-labelledby="modalCidadesGcmLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                      <button type="button" id="btnVoltarCidadesGcm" class="btn p-0 border-0 bg-transparent" style="display:none" onclick="voltarListaCidadesGcm()" aria-label="Voltar">
+                        <i class="bi bi-arrow-left" style="font-size:1.5rem;"></i>
+                      </button>
+                      <h5 class="modal-title mb-0" id="modalCidadesGcmLabel">Selecione a cidade</h5>
                     </div>
-                    <!-- Conteúdo de cada cidade -->
-                    <div id="gcm-araraquara" class="gcm-content">
-                        <p>Araraquara</p>
-                    <p><strong>Telefone:</strong> (16) 99798-5508</p>
-                    <p><strong>Endereço:</strong> Avenida Bento de Abreu, 1172, Jardim Primavera</p>
-                    <p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com seus documentos pessoais e do veículo para solicitar o ofício de liberação.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="cidades-lista-gcm">
+                      <div class="gcm-grid mb-3">
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('araraquara')">Araraquara</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('barretos')">Barretos</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('botucatu')">Botucatu</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('morato')">Francisco Morato</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('ourinhos')">Ourinhos</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('prudente')">Pres. Prudente</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('sv')">São Vicente</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('sorocaba')">Sorocaba</button>
+                        <button class="gcm-button" onclick="mostrarProcedimentoCidade('ubatuba')">Ubatuba</button>
+                      </div>
                     </div>
-
-                    <div id="gcm-barretos" class="gcm-content">
-                        <p>Barretos</p>
-                        <p><strong>Telefone:</strong> (17) 98118-2287</p>
-                        <p><strong>Endereço:</strong> Rua 30, nº 506, Bairro Marília, Barretos</p>
-                        <p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com o documento do veículo em dia para solicitar o ofício de liberação.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="gcm-botucatu" class="gcm-content">
-                        <p>Botucatu</p>
-                        <p><strong>Endereço:</strong> Rua Ati, 145, Vila dos Lavradores</p>
-                        <p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com os documentos pessoais e do veículo para solicitar o ofício de liberação.</p>
-                        <p><strong>Observação:</strong> Em breve será possível solicitar pelo site ou pelo e-mail <a href="mailto:gcm@botucatu.sp.gov.br">gcm@botucatu.sp.gov.br</a>.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="gcm-morato" class="gcm-content">
-                        <p>Francisco Morato</p>
-                        <p><strong>Endereço:</strong> Rua Manoel Vilaboim, 266 (ao lado da delegacia civil)</p>
-                        <p><strong>Procedimento:</strong> Presencial com documentos pessoais.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 447,30</td>
-                                    <td>R$ 46,68</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 466,75</td>
-                                    <td>R$ 44,74</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 700,13</td>
-                                    <td>R$ 70,02</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="gcm-ourinhos" class="gcm-content">
-                        <p>Ourinhos</p>
-                        <p><strong>Endereço:</strong> Rua Silva Jardim, 164</p>
-                        <p><strong>Procedimento:</strong> Ofício solicitado apenas na secretaria</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 5,65</td>
-                                    <td>R$ 394,20</td>
-                                    <td>R$ 55,03</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 5,65</td>
-                                    <td>R$ 394,20</td>
-                                    <td>R$ 55,03</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 11,06</td>
-                                    <td>R$ 750,14</td>
-                                    <td>R$ 165,08</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                    <div id="gcm-prudente" class="gcm-content">
-                        <p>Presidente Prudente</p>
-                        <p><strong>Telefone:</strong> (18) 3399-1100</p>
-                        <p>
-                            <strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos
-                            pessoais e do veículo até o <strong>Atende Prudente</strong>, na Rua Mal. Floriano Peixoto,
-                            342, Vila Marcondes.
-                        </p>
-
-                        <h6>Documentos necessários:</h6>
-                        <ul>
-                            <li><strong>Pessoa Física:</strong>
-                                <ul>
-                                    <li>Proprietário ou procurador (apresentar documento de identidade)</li>
-                                    <li>Documento do veículo: CRLV atual</li>
-                                    <li>Comprovante de pagamento de multas obrigatórias</li>
-                                    <li>Condutor habilitado para retirar o veículo ou remoção por guincho</li>
-                                </ul>
-                            </li>
-                            <li><strong>Pessoa Jurídica:</strong>
-                                <ul>
-                                    <li>Diretor, gerente ou procurador (apresentar documento de identidade)</li>
-                                    <li>Cópia autenticada do contrato social</li>
-                                    <li>Documentos do veículo:
-                                        <ul>
-                                            <li style="list-style-type: '- '; margin-left: 1em;">CRV atual</li>
-                                            <li style="list-style-type: '- '; margin-left: 1em;">CRV em branco</li>
-                                        </ul>
-                                    </li>
-                                    <li>Comprovante de pagamento de multas obrigatórias</li>
-                                    <li>Condutor habilitado para retirar o veículo ou remoção por guincho</li>
-                                    <li>Apresentar a documentação informada no Atende Prudente</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <p>Valores</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 407,22</td>
-                                    <td>R$ 40,72</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="gcm-sv" class="gcm-content">
-                        <p>São Vicente</p>
-                        <p><strong>Telefone:</strong> (13) 3561-5350</p>
-                        <span><strong>Endereço:</strong> Rua General Etchegoyen, 40, Vila Cascatinhas (proximo ao predio
-                            da prefeitura)</span>
-                        <p><strong>Procedimento:</strong> Solicitação presencial do ofício de liberação com documentos
-                            pessoais.</p>
-                        VALORES
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 3,28</td>
-                                    <td>R$ 328,00</td>
-                                    <td>R$ 32,80</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 3,53</td>
-                                    <td>R$ 353,00</td>
-                                    <td>R$ 35,30</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 6,50</td>
-                                    <td>R$ 650,00</td>
-                                    <td>R$ 65,00</td>
-                                </tr>
-                                <tr>
-                                    <td>Bicicleta</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 8,83</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div id="gcm-sorocaba" class="gcm-content">
-                    <p>Sorocaba</p>
-                    <p><strong>Telefone:</strong> (15) 3238-2323</p>
-                    <p><strong>Endereço:</strong> Rua Professor Dirceu Ferreira da Silva, 55, Alto da Boa Vista</p>
-                    <p><strong>Procedimento:</strong> O proprietário pode solicitar a liberação presencialmente no endereço acima ou por e-mail: <a href="mailto:guincho.semob@sorocaba.sp.gov.br">guincho.semob@sorocaba.sp.gov.br</a>. É necessário apresentar ou anexar cópias dos documentos pessoais e do veículo.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 89,00</td>
-                                    <td>R$ 36,96</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 91,51</td>
-                                    <td>R$ 36,96</td>
-                                </tr>
-                                <tr>
-                                    <td>Médio</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 350,00</td>
-                                    <td>R$ 53,77</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 494,18</td>
-                                    <td>R$ 71,17</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                    <div id="gcm-ubatuba" class="gcm-content">
-                        <p>Ubatuba</p>
-                        <p><strong>Endereço:</strong> Rua Dona Maria Alves, 958</p>
-                        <p><strong>Secretaria de Mobilidade Urbana e Trânsito</strong></p>
-                        <p><strong>Procedimento:</strong> O proprietário deve comparecer presencialmente à Secretaria de Mobilidade com documentos pessoais e do veículo para solicitar o ofício de liberação.</p>
-                        <p>VALORES</p>
-                        <table class="table table-sm">
-                            <thead>
-                                <tr>
-                                    <th>Tipo</th>
-                                    <th>Valor/km</th>
-                                    <th>Valor Recolha</th>
-                                    <th>Valor Estadia</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Moto</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                                <tr>
-                                    <td>Carro</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                                <tr>
-                                    <td>Caminhão</td>
-                                    <td>R$ 0,00</td>
-                                    <td>R$ 144,00</td>
-                                    <td>R$ 29,18</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <div id="cidade-procedimento-gcm" style="display:none;"></div>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
     </main>
@@ -762,6 +412,39 @@
             if (selected) selected.style.display = 'block';
         }
 
+        const procedimentosCidadesGcm = {
+  araraquara: `<h5>Araraquara</h5><p><strong>Telefone:</strong> (16) 99798-5508</p><p><strong>Endereço:</strong> Avenida Bento de Abreu, 1172, Jardim Primavera</p><p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com seus documentos pessoais e do veículo para solicitar o ofício de liberação.</p><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr></tbody></table>`,
+  barretos: `<h5>Barretos</h5><p><strong>Telefone:</strong> (17) 98118-2287</p><p><strong>Endereço:</strong> Rua 30, nº 506, Bairro Marília, Barretos</p><p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com o documento do veículo em dia para solicitar o ofício de liberação.</p><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr></tbody></table>`,
+  botucatu: `<h5>Botucatu</h5><p><strong>Endereço:</strong> Rua Ati, 145, Vila dos Lavradores</p><p><strong>Procedimento:</strong> O proprietário deve comparecer pessoalmente com os documentos pessoais e do veículo para solicitar o ofício de liberação.</p><p><strong>Observação:</strong> Em breve será possível solicitar pelo site ou pelo e-mail <a href='mailto:gcm@botucatu.sp.gov.br'>gcm@botucatu.sp.gov.br</a>.</p><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr><tr><td>Caminhão</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr></tbody></table>`,
+  morato: `<h5>Francisco Morato</h5><p><strong>Endereço:</strong> Rua Manoel Vilaboim, 266 (ao lado da delegacia civil)</p><p><strong>Procedimento:</strong> Presencial com documentos pessoais.</p><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 447,30</td><td>R$ 46,68</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 466,75</td><td>R$ 44,74</td></tr><tr><td>Caminhão</td><td>R$ 0,00</td><td>R$ 700,13</td><td>R$ 70,02</td></tr></tbody></table>`,
+  ourinhos: `<h5>Ourinhos</h5><p><strong>Endereço:</strong> Rua Silva Jardim, 164</p><p><strong>Procedimento:</strong> Ofício solicitado apenas na secretaria</p><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 5,65</td><td>R$ 394,20</td><td>R$ 55,03</td></tr><tr><td>Carro</td><td>R$ 5,65</td><td>R$ 394,20</td><td>R$ 55,03</td></tr><tr><td>Caminhão</td><td>R$ 11,06</td><td>R$ 750,14</td><td>R$ 165,08</td></tr></tbody></table>`,
+  prudente: `<h5>Presidente Prudente</h5><p><strong>Telefone:</strong> (18) 3399-1100</p><p><strong>Procedimento:</strong> O proprietário deverá ir pessoalmente com os documentos pessoais e do veículo até o <strong>Atende Prudente</strong>, na Rua Mal. Floriano Peixoto, 342, Vila Marcondes.</p><h6>Documentos necessários:</h6><ul><li><strong>Pessoa Física:</strong><ul><li>Proprietário ou procurador (apresentar documento de identidade)</li><li>Documento do veículo: CRLV atual</li><li>Comprovante de pagamento de multas obrigatórias</li><li>Condutor habilitado para retirar o veículo ou remoção por guincho</li></ul></li><li><strong>Pessoa Jurídica:</strong><ul><li>Diretor, gerente ou procurador (apresentar documento de identidade)</li><li>Cópia autenticada do contrato social</li><li>Documentos do veículo:<ul><li>CRV atual</li><li>CRV em branco</li></ul></li><li>Comprovante de pagamento de multas obrigatórias</li><li>Condutor habilitado para retirar o veículo ou remoção por guincho</li><li>Apresentar a documentação informada no Atende Prudente</li></ul></li></ul><p>VALORES</p><table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 407,22</td><td>R$ 40,72</td></tr></tbody></table>`,
+  sv: `<h5>São Vicente</h5><p><strong>Telefone:</strong> (13) 3561-5350</p><span><strong>Endereço:</strong> Rua General Etchegoyen, 40, Vila Cascatinhas (próximo ao prédio da prefeitura)</span><p><strong>Procedimento:</strong> Solicitação presencial do ofício de liberação com documentos pessoais.</p>VALORES<table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 3,28</td><td>R$ 328,00</td><td>R$ 32,80</td></tr><tr><td>Carro</td><td>R$ 3,53</td><td>R$ 353,00</td><td>R$ 35,30</td></tr><tr><td>Caminhão</td><td>R$ 6,50</td><td>R$ 650,00</td><td>R$ 65,00</td></tr><tr><td>Bicicleta</td><td>R$ 0,00</td><td>R$ 0,00</td><td>R$ 8,83</td></tr></tbody></table>`,
+  sorocaba: `<h5>Sorocaba</h5><p><strong>Telefone:</strong> (15) 3238-2323</p><p><strong>Endereço:</strong> Rua Professor Dirceu Ferreira da Silva, 55, Alto da Boa Vista</p><p><strong>Procedimento:</strong> O proprietário pode solicitar a liberação presencialmente no endereço acima ou por e-mail: <a href='mailto:guincho.semob@sorocaba.sp.gov.br'>guincho.semob@sorocaba.sp.gov.br</a>. É necessário apresentar ou anexar cópias dos documentos pessoais e do veículo.</p>VALORES<table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 89,00</td><td>R$ 36,96</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 91,51</td><td>R$ 36,96</td></tr><tr><td>Médio</td><td>R$ 0,00</td><td>R$ 350,00</td><td>R$ 53,77</td></tr><tr><td>Caminhão</td><td>R$ 0,00</td><td>R$ 494,18</td><td>R$ 71,17</td></tr></tbody></table>`,
+  ubatuba: `<h5>Ubatuba</h5><p><strong>Endereço:</strong> Rua Dona Maria Alves, 958</p><p><strong>Secretaria de Mobilidade Urbana e Trânsito</strong></p><p><strong>Procedimento:</strong> O proprietário deve comparecer presencialmente à Secretaria de Mobilidade com documentos pessoais e do veículo para solicitar o ofício de liberação.</p>VALORES<table class='table table-sm'><thead><tr><th>Tipo</th><th>Valor/km</th><th>Valor Recolha</th><th>Valor Estadia</th></tr></thead><tbody><tr><td>Moto</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr><tr><td>Carro</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr><tr><td>Caminhão</td><td>R$ 0,00</td><td>R$ 144,00</td><td>R$ 29,18</td></tr></tbody></table>`
+};
+function mostrarProcedimentoCidade(cidade) {
+  document.getElementById('cidades-lista-gcm').style.display = 'none';
+  const procedimentoDiv = document.getElementById('cidade-procedimento-gcm');
+  procedimentoDiv.style.display = 'block';
+  procedimentoDiv.style.opacity = 0;
+  procedimentoDiv.style.transform = 'translateY(30px)';
+  procedimentoDiv.innerHTML = procedimentosCidadesGcm[cidade] || '<p>Procedimento não encontrado.</p>';
+  document.getElementById('btnVoltarCidadesGcm').style.display = 'inline-block';
+  // Força reflow para garantir que a animação será aplicada
+  void procedimentoDiv.offsetWidth;
+  procedimentoDiv.style.transition = 'opacity 0.4s cubic-bezier(0.4,0,0.2,1), transform 0.4s cubic-bezier(0.4,0,0.2,1)';
+  procedimentoDiv.style.opacity = 1;
+  procedimentoDiv.style.transform = 'translateY(0)';
+}
+
+function voltarListaCidadesGcm() {
+  const procedimentoDiv = document.getElementById('cidade-procedimento-gcm');
+  procedimentoDiv.style.transition = '';
+  procedimentoDiv.style.display = 'none';
+  document.getElementById('cidades-lista-gcm').style.display = 'block';
+  document.getElementById('btnVoltarCidadesGcm').style.display = 'none';
+}
     </script>
 
 </body>
