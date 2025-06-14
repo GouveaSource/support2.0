@@ -83,3 +83,52 @@ footer {
 .hidden {
     display: none;
 }
+
+/* --- Estilos Responsivos para Tabelas (transforma em cartões) --- */
+@media (max-width: 767px) {
+    /* Aplica a classe 'responsive-table-cards' para as tabelas que queremos transformar */
+    .responsive-table-cards,
+    .responsive-table-cards tbody,
+    .responsive-table-cards tr,
+    .responsive-table-cards td {
+        display: block; /* Faz com que os elementos da tabela se comportem como blocos */
+        width: 100%; /* Garante que ocupem a largura total */
+    }
+
+    .responsive-table-cards thead {
+        display: none; /* Oculta o cabeçalho da tabela original em telas pequenas */
+    }
+
+    .responsive-table-cards tr {
+        margin-bottom: 1rem; /* Espaço entre os "cartões" de cada linha */
+        border: 1px solid #dee2e6; /* Borda do cartão */
+        border-radius: 0.375rem; /* Bordas arredondadas */
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Sombra suave */
+        overflow: hidden; /* Garante que nada vaze */
+    }
+
+    .responsive-table-cards td {
+        border: none !important; /* Remove bordas internas de célula */
+        border-bottom: 1px solid #e9ecef !important; /* Linha separadora entre campos */
+        position: relative;
+        padding-left: 50% !important; /* Espaço para o "cabeçalho" da célula (data-label) */
+        text-align: right; /* Alinha o valor do dado à direita */
+    }
+
+    /* Remove a borda inferior da última célula de cada "cartão" */
+    .responsive-table-cards tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Estiliza o "cabeçalho" (data-label) que aparece antes do conteúdo da célula */
+    .responsive-table-cards td::before {
+        content: attr(data-label); /* Pega o texto do atributo data-label */
+        position: absolute;
+        left: 1rem; /* Posição do "cabeçalho" */
+        width: 45%; /* Largura do "cabeçalho" */
+        font-weight: bold;
+        text-align: left;
+        color: #495057; /* Cor do texto do "cabeçalho" */
+        white-space: nowrap; /* Evita quebra de linha do cabeçalho */
+    }
+}
