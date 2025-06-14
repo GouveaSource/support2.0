@@ -446,6 +446,36 @@ function voltarListaCidadesGcm() {
   document.getElementById('btnVoltarCidadesGcm').style.display = 'none';
 }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Define o caminho da página de login e da política
+      const loginPage = 'login.html';
+      const policyPage = 'politica-interna.html';
+
+      // Pega o caminho atual da URL
+      const currentPath = window.location.pathname.split('/').pop();
+
+      // Verifica se o usuário está logado (pela flag no sessionStorage)
+      const isLoggedIn = sessionStorage.getItem('loggedIn');
+      // Verifica se a política foi aceita
+      const policyAccepted = sessionStorage.getItem('policyAccepted');
+
+      // Se o usuário NÃO estiver logado E não estiver na página de login ou política, redireciona para o login
+      if (!isLoggedIn && currentPath !== loginPage && currentPath !== policyPage) {
+        window.location.href = loginPage;
+        return; // Sai da função para evitar processamento desnecessário
+      }
+
+      // Se o usuário estiver logado, mas a política AINDA NÃO foi aceita, redireciona para a página da política
+      // Isso acontecerá uma única vez, no primeiro acesso após o login
+      if (isLoggedIn && !policyAccepted && currentPath !== policyPage) {
+        window.location.href = policyPage;
+        return; // Sai da função
+      }
+    });
+  </script>
+</body>
+</html>
 
 </body>
 
