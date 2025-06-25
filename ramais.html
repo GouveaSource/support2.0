@@ -260,7 +260,7 @@
       // Verifica se o usuário está logado (pela flag no sessionStorage)
       const isLoggedIn = sessionStorage.getItem('loggedIn');
       // Verifica se a política foi aceita
-      const policyAccepted = sessionStorage.getItem('policyAccepted');
+      const policyAccepted = localStorage.getItem('policyAccepted');
 
       // Se o usuário NÃO estiver logado E não estiver na página de login ou política, redireciona para o login
       if (!isLoggedIn && currentPath !== loginPage && currentPath !== policyPage) {

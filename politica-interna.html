@@ -86,8 +86,8 @@
       </div>
       <script>
     document.getElementById('acceptPolicyBtn').addEventListener('click', function() {
-      // Quando o usuário clica em 'Aceitar', marcamos a flag no sessionStorage
-      sessionStorage.setItem('policyAccepted', 'true');
+      // Quando o usuário clica em 'Aceitar', marcamos a flag no localStorage
+      localStorage.setItem('policyAccepted', 'true');
       // Redireciona para a página inicial
       window.location.href = 'index.html';
     });
