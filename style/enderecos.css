@@ -9,8 +9,23 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--branco);
   color: var(--preto);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar */
 .navbar {
   background-color: var(--preto);
 }
@@ -30,6 +45,7 @@ body {
   color: var(--branco) !important;
 }
 
+/* Seções e Cards Principais */
 .section {
   padding: 60px 0;
 }
@@ -39,6 +55,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Tabela Padrão (Desktop) */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -57,16 +74,18 @@ th {
   background-color: #f2f2f2;
 }
 
-#addressTable tbody tr:hover,
-#contactTable tbody tr:hover {
+/* Efeito hover nas linhas da tabela */
+#addressTableDesktop tbody tr:hover {
   background-color: #f2f2f2;
   transition: background-color 0.2s ease-in-out;
 }
 
+/* Campo de Pesquisa */
 .search-bar {
   margin-bottom: 20px;
 }
 
+/* Botões de Ícone */
 .icon-btn {
   background: none;
   border: none;
@@ -78,10 +97,138 @@ th {
   color: #d46a00;
 }
 
+/* Footer */
 footer {
   background-color: var(--preto);
   color: var(--branco);
   padding: 15px 0;
   text-align: center;
   font-size: 0.9rem;
+  flex-shrink: 0; /* Garante que o footer não encolha */
+}
+
+
+/* --- Estilos Responsivos para Mobile (@media) --- */
+@media (max-width: 767px) {
+    /* Esconde a barra de pesquisa em mobile */
+    .search-bar {
+      display: none !important; /* Força a remoção da barra de pesquisa em mobile */
+    }
+
+    /* Transforma a tabela em cards (para responsive-table-cards, se visível) */
+    .responsive-table-cards,
+    .responsive-table-cards tbody,
+    .responsive-table-cards tr,
+    .responsive-table-cards td {
+        display: block;
+        width: 100%;
+    }
+
+    .responsive-table-cards thead {
+        display: none;
+    }
+
+    .responsive-table-cards tr {
+        margin-bottom: 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 0.375rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        overflow: hidden;
+    }
+
+    .responsive-table-cards td {
+        border: none !important;
+        border-bottom: 1px solid #e9ecef !important;
+        position: relative;
+        padding-left: 50% !important;
+        text-align: right;
+    }
+
+    .responsive-table-cards tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    .responsive-table-cards td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: #495057;
+        white-space: nowrap;
+    }
+
+    /* Botão de Voltar (mobile apenas) */
+    .back-button-mobile {
+      padding: 8px 15px;
+      margin-bottom: 15px;
+      background-color: var(--laranja);
+      color: var(--branco);
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      gap: 5px;
+      align-items: center;
+      width: 100%; /* Ocupa a largura total */
+      /* display: none; -> controlado por .d-none e .d-flex no HTML/JS */
+    }
+    .back-button-mobile:hover {
+        background-color: #d97305;
+        color: var(--branco);
+    }
+
+    /* Card de Detalhes do Endereço (mobile apenas) */
+    .address-card-mobile {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        transition: opacity 0.4s ease, transform 0.4s ease; /* Transição global para entrada e saída */
+
+        /* Estado inicial para entrada (fora da tela à direita) */
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    .address-card-mobile.show {
+        opacity: 1;
+        transform: translateX(0); /* Estado visível (posição normal) */
+    }
+
+    .address-card-mobile.hide-left {
+        opacity: 0;
+        transform: translateX(-100%); /* Estado de saída (fora da tela à esquerda) */
+    }
+
+    /* Grid de Cards Simples de Pátio (mobile apenas) */
+    .patio-card-grid-mobile {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      padding-top: 15px;
+    }
+
+    .patio-simple-card-item {
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80px;
+    }
+
+    .patio-simple-card-item:hover {
+      background-color: #e9ecef;
+      transform: translateY(-2px);
+    }
 }

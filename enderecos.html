@@ -4,22 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contatos - Suporte</title>
+  <title>Endereços - Suporte</title>
 
-  <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/enderecos.css">
   <link rel="icon" type="image/x-icon" href="images/Logo_ico.ico">
-
-  <style>
-
-  </style>
 </head>
 
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html" style="color: var(--laranja); font-weight: bold;">Inicio</a>
@@ -42,228 +36,248 @@
     </div>
   </nav>
 
-  <!-- Conteúdo -->
   <main>
     <div class="section" style="margin-top: 80px;">
       <div class="container-fluid">
         <div class="card">
           <h2 class="text-center mb-4">Lista de Endereços</h2>
-          <div class="search-bar">
+          
+          <div class="search-bar d-none d-md-block"> 
             <input type="text" id="searchInput" class="form-control" placeholder="Digite para pesquisar...">
           </div>
 
-          <table id="contactTable">
-            <thead>
-              <tr>
-                <th>Pátio</th>
-                <th>Endereço</th>
-                <th>CEP</th>
-                <th>Referencia</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+          <button id="backToPatiosBtn" class="btn back-button-mobile d-flex align-items-center d-none">
+              <i class="bi bi-arrow-left me-2"></i> Voltar para a lista
+          </button>
 
+          <div id="contentViewsContainer">
+            <table id="addressTableDesktop" class="table table-striped responsive-table-cards d-none d-md-table">
+              <thead>
+                <tr>
+                  <th>Pátio</th>
+                  <th>Endereço</th>
+                  <th>CEP</th>
+                  <th>Referencia</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                </tbody>
+            </table>
+
+            <div id="patioCardGridMobile" class="patio-card-grid-mobile d-md-none">
+              </div>
+
+            <div id="addressDetailsContainer" style="display: none;">
+              <div class="address-card-mobile">
+                  <h5 class="mb-3" id="detailsPatioName"></h5>
+                  <p><strong>Endereço:</strong> <span id="detailsEndereco"></span></p>
+                  <p><strong>CEP:</strong> <span id="detailsCEP"></span></p>
+                  <p><strong>Referência:</strong> <span id="detailsReferencia"></span></p>
+                  <div class="mt-3">
+                      <button class="icon-btn me-2" onclick="openDetailsMap()">
+                          <i class="bi bi-geo-alt-fill" style="color: var(--laranja); font-size: 1.5rem;"></i> Abrir Mapa
+                      </button>
+                      <button class="icon-btn" onclick="copyDetailsContato()">
+                          <i class="bi bi-files" style="color: var(--laranja); font-size: 1.5rem;"></i> Copiar Detalhes
+                      </button>
+                      <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
-    © 2025 Grupo Carvalho.
+    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea. | <a href="politica-interna.html" style="color: var(--branco); text-decoration: none;">Política de Privacidade Interna</a>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
+    // Dados dos endereços
     const enderecos = [
-      {
-        patio: "Araraquara",
-        endereco: "Av. Dr. Waldomiro Blundi 54",
-        cep: "14807-422",
-        referencia: "Ao Lado Do Posto De Combustivel Do Bairro Yolanda Ópice",
-        mapa: "https://maps.app.goo.gl/VkzdRejp6KS4Uxaw8"
-      },
-      {
-        patio: "Avaré",
-        endereco: "Sp 255 Km 264 Zona Rural S/N",
-        cep: "18700-970",
-        referencia: "De frente com a InRoda",
-        mapa: "https://maps.app.goo.gl/dhHBZNQUZw1tACz36"
-      },
-      {
-        patio: "Barretos",
-        endereco: "Rua Altair Do Nascimento 850",
-        cep: "14783-152",
-        referencia: "Próximo à Mercedes Benz",
-        mapa: "https://maps.app.goo.gl/cnC8Mk346ZVRAWZg8"
-      },
-      {
-        patio: "Botucatu",
-        endereco: "Avenida Das Hortências 1703",
-        cep: "18605-258",
-        referencia: "-",
-        mapa: "https://maps.app.goo.gl/nCR5UbxJm1wWQ5He7"
-      },
-      {
-        patio: "Caraguatatuba",
-        endereco: "Rua Aríetes 100",
-        cep: "11675-680",
-        referencia: "Próximo à policia rodoviária",
-        mapa: "https://maps.app.goo.gl/uJH3cYCjRFRAMU8E8"
-      },
-      {
-        patio: "Cerqueira Cesar",
-        endereco: "Avenida João Cardoso de Oliveira 870",
-        cep: "18760-063",
-        referencia: "Ao Lado Do Haras Ramos",
-        mapa: "https://goo.gl/maps/hoRjHjehcePnUsuJA"
-      },
-      {
-        patio: "Duartina",
-        endereco: "Av. Áureliano Aredes - Cabrália Paulista - SP S/N",
-        cep: "17480-000",
-        referencia: "-",
-        mapa: "https://maps.app.goo.gl/fVDdsYkz3voWH8PGA"
-      },
-      {
-        patio: "Guararapes",
-        endereco: "Estrada Vicinal Natal Scatolin - Km 04 S/N - Corrego Nascente",
-        cep: "16700-000",
-        referencia: "Ao Lado Esquerdo Do Motel Liv",
-        mapa: "https://goo.gl/maps/uCSchwDjTZ5rFw3a9"
-      },
-      {
-        patio: "Francisco Morato",
-        endereco: "Estr. Mun. dos Porretes 938 - Jardim Florida",
-        cep: "07913-000",
-        referencia: "-",
-        mapa: "https://maps.app.goo.gl/bvMqu3uZyTZoyk9x8"
-      },
-      {
-        patio: "Jau",
-        endereco: "Av. Lourenço Neto De Almeida Prado 1031",
-        cep: "17213-710",
-        referencia: "Atrás Do Território Do Calçado",
-        mapa: "https://maps.app.goo.gl/xEGFfAuAGbShf8En7"
-      },
-      {
-        patio: "Marilia",
-        endereco: "Rod. Com. João Ribeiro De Barros Km464",
-        cep: "17519-780",
-        referencia: "Ao Lado Da Empresa Bananas Coreban",
-        mapa: "https://maps.app.goo.gl/aZAuKhEth87MSuQt5"
-      },
-      {
-        patio: "Mirassol",
-        endereco: "Av. Airton José Bilachi 3965",
-        cep: "15134-022",
-        referencia: "Próximo ao laboratório de alimentos Intertek Brasil",
-        mapa: "https://goo.gl/maps/8ChdzQtKAxVAKsHm7"
-      },
-      {
-        patio: "Ourinhos",
-        endereco: "Rua Mario de Oliveira Branco 150",
-        cep: "19902-640",
-        referencia: "Atras da Ouribram",
-        mapa: "https://goo.gl/maps/dzt6AecAoQnq99PW9"
-      },
-      {
-        patio: "Presidente Prudente",
-        endereco: "Rod. Assis Chateaubriand Km 459",
-        cep: "19053-680",
-        referencia: "Em Frente ao Angar Do Águia Da Policia Militar",
-        mapa: "https://goo.gl/maps/xtSSKJiV4do8pi1y8"
-      },
-      {
-        patio: "Bolsão",
-        endereco: "Rodovia Orlando Quagliato Km 10",
-        cep: "18900-000",
-        referencia: "Em frente ao Motel Vila Verde",
-        mapa: "https://maps.app.goo.gl/8ZshLEF8oa1CTcNd8"
-      },
-      {
-        patio: "Santana da Ponte Pensa",
-        endereco: "Rodovia Elzirio Martins Km 1/5 S/N",
-        cep: "15765-000",
-        referencia: "Perto Da Caixa Dagua Da Sabesp",
-        mapa: "https://maps.app.goo.gl/9j89ZXf4Jc4iku6M6"
-      },
-      {
-        patio: "São José do Rio Preto",
-        endereco: "Rua Felipe Assad Karam 300 - Est. Jockey Clube",
-        cep: "15081-517",
-        referencia: "Proxima A Mar&Rio Pescados",
-        mapa: "https://maps.app.goo.gl/kXvp1iL2ae3Wkz9H8"
-      },
-      {
-        patio: "São Vicente",
-        endereco: "Av. Martins Fontes 1118",
-        cep: "11390-200",
-        referencia: "Proximo a Pou-Cor industria de tintas",
-        mapa: "https://maps.app.goo.gl/DuG7De2nVsdbpAWdA"
-      },
-      {
-        patio: "Sorocaba",
-        endereco: "Estr. Ferrov. João De Oliveira 100. Ipanema Das Pedras",
-        cep: "18052-464",
-        referencia: "Ao Lado Da Pista De Carro",
-        mapa: "https://maps.app.goo.gl/TpNVQ9wuMZts2pFD6"
-      },
-      {
-        patio: "Tremembé",
-        endereco: "Estrada Três Cruzes 718 - Bairro Tremembé",
-        cep: "02285-000",
-        referencia: "-",
-        mapa: "https://maps.app.goo.gl/ZCAextKBL4K2jkmr6"
-      },
-      {
-        patio: "Teodoro Sampaio",
-        endereco: "Rodovia Arlindo Betio Km 01",
-        cep: "19280-000",
-        referencia: "Próximo Super Mercado Triunfo loja 2",
-        mapa: "https://maps.app.goo.gl/T5A9T7XxWamWXxeh7"
-      },
-      {
-        patio: "Ubatuba",
-        endereco: "Estrada Monte Valério 2300",
-        cep: "11691-400",
-        referencia: "300 Metros Após O Campo De Futebol",
-        mapa: "https://maps.app.goo.gl/rNJQRuAYgGiHZw9s5"
-      }
+      { patio: "Araraquara", endereco: "Av. Dr. Waldomiro Blundi 54", cep: "14807-422", referencia: "Ao Lado Do Posto De Combustivel Do Bairro Yolanda Ópice", mapa: "https://maps.app.goo.gl/t5zC8e2QyXj3G6yN7" },
+      { patio: "Avaré", endereco: "Sp 255 Km 264 Zona Rural S/N", cep: "18700-970", referencia: "De frente com a InRoda", mapa: "https://maps.app.goo.gl/L3gX6yX9Z2nB7vQ9A" },
+      { patio: "Barretos", endereco: "Rua Altair Do Nascimento 850", cep: "14783-152", referencia: "Próximo à Mercedes Benz", mapa: "https://maps.app.goo.gl/F8gX4yX7Y2mN1wS1B" },
+      { patio: "Botucatu", endereco: "Avenida Das Hortências 1703", cep: "18605-258", referencia: "-", mapa: "https://maps.app.goo.gl/H6sQ3yW9Z1pC2dE2F" },
+      { patio: "Caraguatatuba", endereco: "Rua Aríetes 100", cep: "11675-680", referencia: "Próximo à policia rodoviária", mapa: "https://maps.app.goo.gl/K4rT5xV8Y3eF4gH4J" },
+      { patio: "Cerqueira Cesar", endereco: "Avenida João Cardoso de Oliveira 870", cep: "18760-063", referencia: "Ao Lado Do Haras Ramos", mapa: "https://goo.gl/maps/hoRjHjehcePnUsuJA" },
+      { patio: "Duartina", endereco: "Av. Áureliano Aredes - Cabrália Paulista - SP S/N", cep: "17480-000", referencia: "-", mapa: "https://maps.app.goo.gl/M2nO1xZ7X3iJ5kL5M" },
+      { patio: "Guararapes", endereco: "Estrada Vicinal Natal Scatolin - Km 04 S/N - Corrego Nascente", cep: "16700-000", referencia: "Ao Lado Esquerdo Do Motel Liv", mapa: "https://goo.gl/maps/uCSchwDjTZ5rFw3a9" },
+      { patio: "Francisco Morato", endereco: "Estr. Mun. dos Porretes 938 - Jardim Florida", cep: "07913-000", referencia: "-", mapa: "https://maps.app.goo.gl/P0qR3zY6Z2lL6mN6P" },
+      { patio: "Jau", endereco: "Av. Lourenço Neto De Almeida Prado 1031", cep: "17213-710", referencia: "Atrás Do Território Do Calçado", mapa: "https://maps.app.goo.gl/S7tU2vX5W3oP7qR7S" },
+      { patio: "Marilia", endereco: "Rod. Com. João Ribeiro De Barros Km464", cep: "17519-780", referencia: "Ao Lado Da Empresa Bananas Coreban", mapa: "https://maps.app.goo.gl/V1wX4yZ4Y2rS8tU8V" },
+      { patio: "Mirassol", endereco: "Av. Airton José Bilachi 3965", cep: "15134-022", referencia: "Próximo ao laboratório de alimentos Intertek Brasil", mapa: "https://goo.gl/maps/8ChdzQtKAxVAKsHm7" },
+      { patio: "Ourinhos", endereco: "Rua Mario de Oliveira Branco 150", cep: "19902-640", referencia: "Atras da Ouribram", mapa: "https://goo.gl/maps/dzt6AecAoQnq99PW9" },
+      { patio: "Presidente Prudente", endereco: "Rod. Assis Chateaubriand Km 459", cep: "19053-680", referencia: "Em Frente ao Angar Do Águia Da Policia Militar", mapa: "https://goo.gl/maps/xtSSKJiV4do8pi1y8" },
+      { patio: "Bolsão", endereco: "Rodovia Orlando Quagliato Km 10", cep: "18900-000", referencia: "Em frente ao Motel Vila Verde", mapa: "https://maps.app.goo.gl/C2dE5fG4H3iJ9kL9M" },
+      { patio: "Santana da Ponte Pensa", endereco: "Rodovia Elzirio Martins Km 1/5 S/N", cep: "15765-000", referencia: "Perto Da Caixa Dagua Da Sabesp", mapa: "https://maps.app.goo.gl/Y5aB6cD3E2fG0hI0J" },
+      { patio: "São José do Rio Preto", endereco: "Rua Felipe Assad Karam 300 - Est. Jockey Clube", cep: "15081-517", referencia: "Proxima A Mar&Rio Pescados", mapa: "https://maps.app.goo.gl/N8oP7qR6S5tU1vW1X" },
+      { patio: "São Vicente", endereco: "Av. Martins Fontes 1118", cep: "11390-200", referencia: "Proximo a Pou-Cor industria de tintas", mapa: "https://maps.app.goo.gl/Q1rS8tU7V6wX2yZ2A" },
+      { patio: "Sorocaba", endereco: "Estr. Ferrov. João De Oliveira 100. Ipanema Das Pedras", cep: "18052-464", referencia: "Ao Lado Da Pista De Carro", mapa: "https://maps.app.goo.gl/E3fG9hI8J7kL3mN3O" },
+      { patio: "Tremembé", endereco: "Estrada Três Cruzes 718 - Bairro Tremembé", cep: "02285-000", referencia: "-", mapa: "https://maps.app.goo.gl/W6xY7zZ5A4bC4dE4F" },
+      { patio: "Teodoro Sampaio", endereco: "Rodovia Arlindo Betio Km 01", cep: "19280-000", referencia: "Próximo Super Mercado Triunfo loja 2", mapa: "https://maps.app.goo.gl/R9sT0uV9W8xY5zZ5A" },
+      { patio: "Ubatuba", endereco: "Estrada Monte Valério 2300", cep: "11691-400", referencia: "300 Metros Após O Campo De Futebol", mapa: "https://maps.app.goo.gl/T0uV1wX0Y9zZ6aB6C" }
     ];
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const tbody = document.querySelector("#contactTable tbody");
+    // Elementos DOM
+    const addressTableDesktop = document.getElementById('addressTableDesktop');
+    const patioCardGridMobile = document.getElementById('patioCardGridMobile');
+    const addressDetailsContainer = document.getElementById('addressDetailsContainer');
+    const backToPatiosBtn = document.getElementById('backToPatiosBtn');
+    const searchInput = document.getElementById('searchInput');
+    const contentViewsContainer = document.getElementById('contentViewsContainer');
+    const searchBar = document.querySelector('.search-bar'); // Seleciona a div da barra de pesquisa
 
-      enderecos.forEach(dado => {
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td>${dado.patio}</td>
-          <td data-endereco="${dado.endereco}">${dado.endereco.split(',')[0]}</td>
-          <td>${dado.cep}</td>
-          <td>${dado.referencia}</td>
-          <td>
-            <button class="icon-btn" onclick="abrirMapa(this)">
-              <i class="bi bi-geo-alt-fill" style="color: var(--laranja);"></i>
-            </button>
-            <button class="icon-btn" onclick="copyContato(this)">
-              <i class="bi bi-files" style="color: var(--laranja);"></i>
-            </button>
-            <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
-          </td>
-        `;
-        tbody.appendChild(tr);
+    let currentEnderecoData = null; // Para armazenar os dados do endereço atualmente exibido
+
+    // Funções de Renderização
+    function renderDesktopTable(filterText = '') {
+      const tbody = addressTableDesktop.querySelector('tbody');
+      tbody.innerHTML = ''; // Limpa as linhas existentes
+
+      enderecos.forEach((dado, index) => {
+        const fullText = Object.values(dado).join(' ').toLowerCase();
+
+        if (fullText.includes(filterText)) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td data-label="Pátio">${dado.patio}</td>
+            <td data-label="Endereço" data-full-address="${dado.endereco}">${dado.endereco.split(',')[0]}</td>
+            <td data-label="CEP">${dado.cep}</td>
+            <td data-label="Referência">${dado.referencia}</td>
+            <td data-label="Ações">
+              <button class="icon-btn" onclick="abrirMapa(event, ${index})">
+                <i class="bi bi-geo-alt-fill" style="color: var(--laranja);"></i>
+              </button>
+              <button class="icon-btn" onclick="copyContato(event, ${index})">
+                <i class="bi bi-files" style="color: var(--laranja);"></i>
+              </button>
+              <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+            </td>
+          `;
+          tbody.appendChild(tr);
+        }
       });
-    });
+    }
 
-    function abrirMapa(button) {
-      const row = button.closest('tr');
-      const patio = row.cells[0].textContent;
-      const dado = enderecos.find(e => e.patio === patio);
+    function renderMobilePatioCards(filterText = '') {
+      patioCardGridMobile.innerHTML = ''; // Limpa os cards existentes
+
+      enderecos.forEach((dado, index) => {
+        const fullText = dado.patio.toLowerCase(); // Filtrar apenas pelo nome do pátio para os cards simples
+
+        if (fullText.includes(filterText)) {
+          const cardItem = document.createElement("div");
+          cardItem.classList.add("patio-simple-card-item");
+          cardItem.textContent = dado.patio;
+          cardItem.onclick = () => showAddressDetails(index); // Ao clicar no card, mostra os detalhes
+
+          patioCardGridMobile.appendChild(cardItem);
+        }
+      });
+    }
+
+    // Função para mostrar a visualização correta (desktop, mobile-lista, ou detalhes)
+    function showCurrentView() {
+      const isMobile = window.innerWidth <= 767;
+      const filterText = searchInput.value.toLowerCase();
+
+      // Esconde todos os containers de visualização e botão de voltar inicialmente
+      addressTableDesktop.style.display = 'none';
+      patioCardGridMobile.style.display = 'none';
+      addressDetailsContainer.style.display = 'none';
+      backToPatiosBtn.classList.remove('d-flex');
+      backToPatiosBtn.classList.add('d-none'); // Garante que o botão Voltar esteja oculto
+
+      // Decide qual visualização principal mostrar (tabela ou grid de cards simples)
+      if (isMobile) {
+        patioCardGridMobile.style.display = 'grid'; 
+        renderMobilePatioCards(filterText);
+      } else {
+        addressTableDesktop.style.display = 'table';
+        renderDesktopTable(filterText);
+      }
+    }
+
+    // Função para exibir os detalhes de um pátio com animação
+    function showAddressDetails(index) {
+      currentEnderecoData = enderecos[index];
+
+      // Preenche os detalhes no container de detalhes
+      document.getElementById('detailsPatioName').textContent = currentEnderecoData.patio;
+      document.getElementById('detailsEndereco').textContent = currentEnderecoData.endereco;
+      document.getElementById('detailsCEP').textContent = currentEnderecoData.cep;
+      document.getElementById('detailsReferencia').textContent = currentEnderecoData.referencia;
+
+      // Esconde as visualizações de lista (desktop e mobile)
+      addressTableDesktop.style.display = 'none';
+      patioCardGridMobile.style.display = 'none';
+      
+      // Exibe os detalhes e aplica a animação de entrada
+      addressDetailsContainer.style.display = 'block';
+      const addressCardElement = addressDetailsContainer.querySelector('.address-card-mobile');
+      addressCardElement.classList.remove('hide-left'); // Remove a classe de saída se houver
+      void addressCardElement.offsetWidth; // Força o reflow para garantir a animação
+      addressCardElement.classList.add('show'); // Aplica a classe de entrada
+
+      // Exibe o botão de voltar (apenas em mobile)
+      if (window.innerWidth <= 767) {
+        backToPatiosBtn.classList.remove('d-none');
+        backToPatiosBtn.classList.add('d-flex');
+      }
+    }
+
+    // Função para ocultar os detalhes e voltar para a lista com animação
+    function hideAddressDetails() {
+      const addressCardElement = addressDetailsContainer.querySelector('.address-card-mobile');
+      
+      // Inicia a animação de saída
+      addressCardElement.classList.remove('show'); // Remove a classe de visibilidade
+      addressCardElement.classList.add('hide-left'); // Adiciona a classe para mover para a esquerda
+
+      // Espera a animação de saída terminar antes de ocultar completamente e remontar a lista
+      setTimeout(() => {
+        addressDetailsContainer.style.display = 'none'; // Oculta o container de detalhes
+        addressCardElement.classList.remove('hide-left'); // Limpa a classe de saída para próxima entrada
+        
+        backToPatiosBtn.classList.remove('d-flex');
+        backToPatiosBtn.classList.add('d-none'); // Oculta o botão de voltar
+
+        showCurrentView(); // Mostra a visualização de lista correta (desktop ou mobile)
+      }, 400); // Deve ser igual à duração da transição CSS (.address-card-mobile transition)
+    }
+
+    // Funções de Ações (Abrir Mapa, Copiar) - para os botões dentro dos cards de detalhes (mobile)
+    function openDetailsMap() {
+      if (currentEnderecoData && currentEnderecoData.mapa && currentEnderecoData.mapa !== "cole o link aqui") {
+        window.open(currentEnderecoData.mapa, '_blank');
+      } else {
+        alert('Link do mapa não cadastrado para este pátio.');
+      }
+    }
+
+    function copyDetailsContato() {
+      if (currentEnderecoData) {
+        const texto = `Pátio: ${currentEnderecoData.patio}\nEndereço: ${currentEnderecoData.endereco}\nCEP: ${currentEnderecoData.cep}\nReferência: ${currentEnderecoData.referencia}`;
+        navigator.clipboard.writeText(texto).then(() => {
+          const span = document.querySelector('#addressDetailsContainer .copiado');
+          span.style.visibility = 'visible';
+          setTimeout(() => {
+            span.style.visibility = 'hidden';
+          }, 5000);
+        });
+      }
+    }
+
+    // Funções para os botões na tabela normal (desktop)
+    function abrirMapa(event, index) {
+      event.stopPropagation(); // Impede que o clique na célula acione o showAddressDetails
+      const dado = enderecos[index];
       if (dado && dado.mapa && dado.mapa !== "cole o link aqui") {
         window.open(dado.mapa, '_blank');
       } else {
@@ -271,16 +285,18 @@
       }
     }
 
-    function copyContato(button) {
-      const row = button.closest('tr');
+    function copyContato(event, index) {
+      event.stopPropagation(); // Impede que o clique na célula acione o showAddressDetails
+      const row = event.target.closest('tr');
       const patio = row.cells[0].textContent;
-      const endereco = row.cells[1].getAttribute('data-endereco');
+      const endereco = row.cells[1].getAttribute('data-full-address'); // Pega o endereço completo
       const cep = row.cells[2].textContent;
       const referencia = row.cells[3].textContent;
 
       const texto = `Pátio: ${patio}\nEndereço: ${endereco}\nCEP: ${cep}\nReferência: ${referencia}`;
 
       navigator.clipboard.writeText(texto).then(() => {
+        const button = event.target.closest('.icon-btn');
         button.innerHTML = '<i class="bi bi-check-circle-fill" style="color: green;"></i>';
         const span = button.nextElementSibling;
         span.style.visibility = 'visible';
@@ -291,47 +307,55 @@
       });
     }
 
-    document.getElementById('searchInput').addEventListener('keyup', function () {
-      const searchText = this.value.toLowerCase();
-      const rows = document.querySelectorAll('#contactTable tbody tr');
-      rows.forEach(row => {
-        const match = [...row.cells].some(cell =>
-          cell.textContent.toLowerCase().includes(searchText)
-        );
-        row.style.display = match ? '' : 'none';
+    // Event Listeners e Inicialização
+    document.addEventListener("DOMContentLoaded", () => {
+      showCurrentView(); // Exibe a visualização correta na carga inicial
+
+      // Evento para o botão "Voltar"
+      backToPatiosBtn.addEventListener('click', hideAddressDetails);
+
+      // Filtro de pesquisa
+      searchInput.addEventListener('keyup', function () {
+        showCurrentView(); // Renderiza a visualização atual com o filtro aplicado
       });
     });
-  </script>
-  <script>
+
+    // Ajusta a exibição quando o tamanho da janela muda (ex: rotacionar celular)
+    window.addEventListener('resize', () => {
+      // Se os detalhes estiverem visíveis, o resize não deve mudar a view principal
+      if (addressDetailsContainer.style.display === 'block') {
+        // Apenas ajusta a visibilidade do botão de voltar se estiver nos detalhes
+        backToPatiosBtn.classList.remove('d-none', 'd-flex'); // Remove ambas para resetar
+        if (window.innerWidth <= 767) {
+          backToPatiosBtn.classList.add('d-flex');
+        } else {
+          backToPatiosBtn.classList.add('d-none');
+        }
+      } else {
+        // Se não estiver nos detalhes, renderiza a visualização correta (tabela ou cards)
+        showCurrentView();
+      }
+    });
+
+    // Lógica de verificação de login e política (MANTER ESTE SCRIPT)
     document.addEventListener('DOMContentLoaded', function() {
-      // Define o caminho da página de login e da política
       const loginPage = 'login.html';
       const policyPage = 'politica-interna.html';
-
-      // Pega o caminho atual da URL
       const currentPath = window.location.pathname.split('/').pop();
 
-      // Verifica se o usuário está logado (pela flag no localStorage)
-      const isLoggedIn = localStorage.getItem('loggedIn');
-      // Verifica se a política foi aceita
-      const policyAccepted = localStorage.getItem('policyAccepted');
+      const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+      const policyAccepted = localStorage.getItem('policyAccepted') === 'true';
 
-      // Se o usuário NÃO estiver logado E não estiver na página de login ou política, redireciona para o login
       if (!isLoggedIn && currentPath !== loginPage && currentPath !== policyPage) {
         window.location.href = loginPage;
-        return; // Sai da função para evitar processamento desnecessário
+        return;
       }
 
-      // Se o usuário estiver logado, mas a política AINDA NÃO foi aceita, redireciona para a página da política
-      // Isso acontecerá uma única vez, no primeiro acesso após o login
       if (isLoggedIn && !policyAccepted && currentPath !== policyPage) {
         window.location.href = policyPage;
-        return; // Sai da função
+        return;
       }
     });
   </script>
 </body>
-</html>
-</body>
-
 </html>
