@@ -1,12 +1,7 @@
 # support2.0
 
 ## Descrição
-O projeto **support2.0** é um portal de suporte desenvolvido para facilitar o acesso a informações, contatos, endereços, mapas e procedimentos relacionados a operações de pátios e leilões. Ele oferece uma interface moderna e responsiva, utilizando tecnologias como HTML, CSS e Bootstrap.
-
-## Estrutura do Projeto
-A estrutura do projeto é organizada da seguinte forma:
-
-support2.0/ ├── index.html ├── contatos.html ├── enderecos.html ├── mapas.html ├── acionamento.html ├── procedimentos.html ├── ramais.html ├── style/ │ ├── style.css │ ├── contatos.css │ ├── enderecos.css │ ├── mapas.css │ ├── acionamento.css │ ├── procedimentos.css │ └── ramais.css ├── images/ │ ├── logo.png │ ├── banner.jpg │ └── icones/ └── README.md
+O projeto **support2.0** é um portal de suporte desenvolvido para facilitar o acesso a informações, contatos, endereços, mapas e procedimentos relacionados a operações de pátios. Ele oferece uma interface moderna e responsiva, utilizando tecnologias como HTML, CSS e Bootstrap e JS.
 
 ## Funcionalidades
 - **Página Inicial**: Apresenta informações gerais e acesso rápido às principais funcionalidades.
@@ -15,6 +10,7 @@ support2.0/ ├── index.html ├── contatos.html ├── enderecos.htm
 - **Mapas**: Exibe mapas interativos para diferentes pátios.
 - **Acionamento**: Gerenciamento de motoristas e veículos por pátio.
 - **Procedimentos**: Orientações detalhadas sobre processos administrativos.
+- **Recados**: Pagina com o acervo de todos os recados exibidos no index.
 
 ## Tecnologias Utilizadas
 - **HTML5**: Estruturação das páginas.
