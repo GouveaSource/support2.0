@@ -47,7 +47,7 @@
           </div>
 
           <button id="backToPatiosBtn" class="btn back-button-mobile d-flex align-items-center d-none">
-              <i class="bi bi-arrow-left me-2"></i> Voltar para a lista
+              <i class="bi bi-arrow-left me-2"></i> Voltar
           </button>
 
           <div id="contentViewsContainer">
@@ -100,28 +100,29 @@
   <script>
     // Dados dos endereços
     const enderecos = [
-      { patio: "Araraquara", endereco: "Av. Dr. Waldomiro Blundi 54", cep: "14807-422", referencia: "Ao Lado Do Posto De Combustivel Do Bairro Yolanda Ópice", mapa: "https://maps.app.goo.gl/t5zC8e2QyXj3G6yN7" },
-      { patio: "Avaré", endereco: "Sp 255 Km 264 Zona Rural S/N", cep: "18700-970", referencia: "De frente com a InRoda", mapa: "https://maps.app.goo.gl/L3gX6yX9Z2nB7vQ9A" },
-      { patio: "Barretos", endereco: "Rua Altair Do Nascimento 850", cep: "14783-152", referencia: "Próximo à Mercedes Benz", mapa: "https://maps.app.goo.gl/F8gX4yX7Y2mN1wS1B" },
-      { patio: "Botucatu", endereco: "Avenida Das Hortências 1703", cep: "18605-258", referencia: "-", mapa: "https://maps.app.goo.gl/H6sQ3yW9Z1pC2dE2F" },
-      { patio: "Caraguatatuba", endereco: "Rua Aríetes 100", cep: "11675-680", referencia: "Próximo à policia rodoviária", mapa: "https://maps.app.goo.gl/K4rT5xV8Y3eF4gH4J" },
-      { patio: "Cerqueira Cesar", endereco: "Avenida João Cardoso de Oliveira 870", cep: "18760-063", referencia: "Ao Lado Do Haras Ramos", mapa: "https://goo.gl/maps/hoRjHjehcePnUsuJA" },
-      { patio: "Duartina", endereco: "Av. Áureliano Aredes - Cabrália Paulista - SP S/N", cep: "17480-000", referencia: "-", mapa: "https://maps.app.goo.gl/M2nO1xZ7X3iJ5kL5M" },
-      { patio: "Guararapes", endereco: "Estrada Vicinal Natal Scatolin - Km 04 S/N - Corrego Nascente", cep: "16700-000", referencia: "Ao Lado Esquerdo Do Motel Liv", mapa: "https://goo.gl/maps/uCSchwDjTZ5rFw3a9" },
-      { patio: "Francisco Morato", endereco: "Estr. Mun. dos Porretes 938 - Jardim Florida", cep: "07913-000", referencia: "-", mapa: "https://maps.app.goo.gl/P0qR3zY6Z2lL6mN6P" },
-      { patio: "Jau", endereco: "Av. Lourenço Neto De Almeida Prado 1031", cep: "17213-710", referencia: "Atrás Do Território Do Calçado", mapa: "https://maps.app.goo.gl/S7tU2vX5W3oP7qR7S" },
-      { patio: "Marilia", endereco: "Rod. Com. João Ribeiro De Barros Km464", cep: "17519-780", referencia: "Ao Lado Da Empresa Bananas Coreban", mapa: "https://maps.app.goo.gl/V1wX4yZ4Y2rS8tU8V" },
-      { patio: "Mirassol", endereco: "Av. Airton José Bilachi 3965", cep: "15134-022", referencia: "Próximo ao laboratório de alimentos Intertek Brasil", mapa: "https://goo.gl/maps/8ChdzQtKAxVAKsHm7" },
-      { patio: "Ourinhos", endereco: "Rua Mario de Oliveira Branco 150", cep: "19902-640", referencia: "Atras da Ouribram", mapa: "https://goo.gl/maps/dzt6AecAoQnq99PW9" },
-      { patio: "Presidente Prudente", endereco: "Rod. Assis Chateaubriand Km 459", cep: "19053-680", referencia: "Em Frente ao Angar Do Águia Da Policia Militar", mapa: "https://goo.gl/maps/xtSSKJiV4do8pi1y8" },
-      { patio: "Bolsão", endereco: "Rodovia Orlando Quagliato Km 10", cep: "18900-000", referencia: "Em frente ao Motel Vila Verde", mapa: "https://maps.app.goo.gl/C2dE5fG4H3iJ9kL9M" },
-      { patio: "Santana da Ponte Pensa", endereco: "Rodovia Elzirio Martins Km 1/5 S/N", cep: "15765-000", referencia: "Perto Da Caixa Dagua Da Sabesp", mapa: "https://maps.app.goo.gl/Y5aB6cD3E2fG0hI0J" },
-      { patio: "São José do Rio Preto", endereco: "Rua Felipe Assad Karam 300 - Est. Jockey Clube", cep: "15081-517", referencia: "Proxima A Mar&Rio Pescados", mapa: "https://maps.app.goo.gl/N8oP7qR6S5tU1vW1X" },
-      { patio: "São Vicente", endereco: "Av. Martins Fontes 1118", cep: "11390-200", referencia: "Proximo a Pou-Cor industria de tintas", mapa: "https://maps.app.goo.gl/Q1rS8tU7V6wX2yZ2A" },
-      { patio: "Sorocaba", endereco: "Estr. Ferrov. João De Oliveira 100. Ipanema Das Pedras", cep: "18052-464", referencia: "Ao Lado Da Pista De Carro", mapa: "https://maps.app.goo.gl/E3fG9hI8J7kL3mN3O" },
-      { patio: "Tremembé", endereco: "Estrada Três Cruzes 718 - Bairro Tremembé", cep: "02285-000", referencia: "-", mapa: "https://maps.app.goo.gl/W6xY7zZ5A4bC4dE4F" },
-      { patio: "Teodoro Sampaio", endereco: "Rodovia Arlindo Betio Km 01", cep: "19280-000", referencia: "Próximo Super Mercado Triunfo loja 2", mapa: "https://maps.app.goo.gl/R9sT0uV9W8xY5zZ5A" },
-      { patio: "Ubatuba", endereco: "Estrada Monte Valério 2300", cep: "11691-400", referencia: "300 Metros Após O Campo De Futebol", mapa: "https://maps.app.goo.gl/T0uV1wX0Y9zZ6aB6C" }
+      { patio: "Agudos", endereco: "R. Aparecida do Norte, 90 - Vila Honorina", cep: "17120-000", referencia: "Posto Elefantinho", mapa: "https://goo.gl/maps/XpYpQcteLaLxLVoL9" },
+      { patio: "Araraquara", endereco: "Av. Dr. Waldomiro Blundi, 54", cep: "14807-422", referencia: "Ao Lado Do Posto De Combustivel Do Bairro Yolanda Ópice", mapa: "https://maps.app.goo.gl/VkzdRejp6KS4Uxaw8" },
+      { patio: "Avaré", endereco: "Sp 255 Km 264 Zona Rural , S/N", cep: "18704-20", referencia: "De frente com a InRoda", mapa: "https://maps.app.goo.gl/dhHBZNQUZw1tACz36" },
+      { patio: "Barretos", endereco: "Rua Altair Do Nascimento, 850", cep: "14783-152", referencia: "Próximo à Mercedes Benz", mapa: "https://maps.app.goo.gl/cnC8Mk346ZVRAWZg8" },
+      { patio: "Botucatu", endereco: "Avenida Das Hortências, 1703", cep: "18605-258", referencia: "x", mapa: "https://maps.app.goo.gl/nCR5UbxJm1wWQ5He7" },
+      { patio: "Caraguatatuba", endereco: "Rua Aríetes, 100", cep: "11675-680", referencia: "Próximo à policia rodoviária", mapa: "https://maps.app.goo.gl/uJH3cYCjRFRAMU8E8" },
+      { patio: "Cerqueira Cesar", endereco: "Avenida João Cardoso de Oliveira, 870 - Centro", cep: "18760-063", referencia: "Ao Lado Do Haras Ramos", mapa: "https://goo.gl/maps/hoRjHjehcePnUsuJA" },
+      { patio: "Duartina", endereco: "Av. Áureliano Aredes, Cabrália Paulista - SP S/N", cep: "17480-000", referencia: "x", mapa: "https://maps.app.goo.gl/fVDdsYkz3voWH8PGA" },
+      { patio: "Guararapes", endereco: "Estrada Vicinal Natal Scatolin, S/N. Km 04 - Corrego Nascente", cep: "16700-000", referencia: "Ao Lado Esquerdo Do Motel Liv", mapa: "https://goo.gl/maps/uCSchwDjTZ5rFw3a9" },
+      { patio: "Francisco Morato", endereco: "Estr. Mun. dos Porretes, 938 - Jardim Florida", cep: "07913-000", referencia: "-", mapa: "https://maps.app.goo.gl/bvMqu3uZyTZoyk9x8" },
+      { patio: "Jau", endereco: "Av. Lourenço Neto De Almeida Prado, 1031", cep: "17213-710", referencia: "Atrás Do Território Do Calçado", mapa: "https://maps.app.goo.gl/xEGFfAuAGbShf8En7" },
+      { patio: "Marilia", endereco: "Rodovia Comandante João Ribeiro De Barros, Sp 294 - Km 464, S/N", cep: "17519-780", referencia: "Ao Lado Da Empresa Bananas Coreban", mapa: "https://maps.app.goo.gl/aZAuKhEth87MSuQt5" },
+      { patio: "Mirassol", endereco: "Av. Airton José Bilachi, 3965", cep: "15134-022", referencia: "Próximo ao laboratório de alimentos Intertek Brasil", mapa: "https://goo.gl/maps/8ChdzQtKAxVAKsHm7" },
+      { patio: "Ourinhos", endereco: "Rua Mario de Oliveira Branco, 150", cep: "19902-640", referencia: "Atras da Ouribram", mapa: "https://goo.gl/maps/dzt6AecAoQnq99PW9" },
+      { patio: "Presidente Prudente", endereco: "Rodovia Assis Chateaubriand Sp 425, Km 459", cep: "19053-680", referencia: "Em Frente ao Angar Do Águia Da Policia Militar", mapa: "https://goo.gl/maps/xtSSKJiV4do8pi1y8" },
+      { patio: "Bolsão", endereco: "Rodovia Orlando Quagliato, Km 10", cep: "18900-000", referencia: "Em frente ao Motel Vila Verde", mapa: "https://maps.app.goo.gl/8ZshLEF8oa1CTcNd8" },
+      { patio: "Santana da Ponte Pensa", endereco: "Rodovia Elzirio Martins Km 1/5, S/N. CENTRO", cep: "15765-000", referencia: "Perto Da Caixa Dagua Da Sabesp", mapa: "https://maps.app.goo.gl/9j89ZXf4Jc4iku6M6" },
+      { patio: "São José do Rio Preto", endereco: "Rua Felipe Assad Karam, 300 - Estância Jockey Clube", cep: "15081-517", referencia: "Proxima A Mar&Rio Pescados", mapa: "https://maps.app.goo.gl/kXvp1iL2ae3Wkz9H8" },
+      { patio: "São Vicente", endereco: "Av. Martins Fontes nº1118", cep: "11390-200", referencia: "Proximo a Pou-Cor industria de tintas", mapa: "https://maps.app.goo.gl/DuG7De2nVsdbpAWdA" },
+      { patio: "Sorocaba", endereco: "Estrada Ferroviário João De Oliveira, 100. Bairro Ipanema Das Pedras", cep: "18052-464", referencia: "Ao Lado Da Pista De Carro", mapa: "https://goo.gl/maps/XBMws1WLEZjDGhvk8" },
+      { patio: "Tremembé (Guarulhos-SP)", endereco: "Estrada Três Cruzes, 718 - Bairro Tremembé", cep: "02285-000", referencia: "x", mapa: "https://maps.app.goo.gl/wGZUX5ZWRpzWNbJP8" },
+      { patio: "Teodoro Sampaio", endereco: "Rodovia Arlindo Betio, km 01", cep: "19280-000", referencia: "Próximo Super Mercado Triunfo loja 2", mapa: "https://maps.app.goo.gl/sm2gX9q8dFbXJsbi6" },
+      { patio: "Ubatuba", endereco: "Estrada Monte Valério, 2300", cep: "11691-400", referencia: "300 Metros Após O Campo De Futebol", mapa: "https://maps.app.goo.gl/Ug8SUDpuTon6SRzQ8" }
     ];
 
     // Elementos DOM
