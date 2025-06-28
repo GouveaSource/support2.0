@@ -80,6 +80,19 @@ th {
   transition: background-color 0.2s ease-in-out;
 }
 
+/* Remove qualquer zebra striping (linhas alternadas) */
+#addressTableDesktop tbody tr,
+#addressTableDesktop tbody tr:nth-child(even),
+#addressTableDesktop tbody tr:nth-child(odd) {
+  background-color: var(--branco) !important;
+}
+
+/* Hover laranja claro nas linhas da tabela desktop - cobre todo o fundo do texto */
+table#addressTableDesktop > tbody > tr:hover > td {
+  background-color: #ffe5c2 !important;
+  transition: background-color 0.2s !important;
+}
+
 /* Campo de Pesquisa */
 .search-bar {
   margin-bottom: 20px;

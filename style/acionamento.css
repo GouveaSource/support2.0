@@ -133,6 +133,19 @@ footer {
     }
 }
 
+/* Remove qualquer zebra striping (linhas alternadas) */
+table.responsive-table-cards tbody tr,
+table.responsive-table-cards tbody tr:nth-child(even),
+table.responsive-table-cards tbody tr:nth-child(odd) {
+  background-color: var(--branco) !important;
+}
+
+/* Hover laranja claro nas linhas da tabela desktop - cobre todo o fundo do texto */
+table.responsive-table-cards > tbody > tr:hover > td {
+  background-color: #ffe5c2 !important;
+  transition: background-color 0.2s !important;
+}
+
 select.form-select {
   border-color: var(--laranja);
 }

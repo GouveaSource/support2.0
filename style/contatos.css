@@ -59,6 +59,7 @@ main {
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: var(--branco) !important;
 }
 
 th,
@@ -66,16 +67,24 @@ td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  background-color: var(--branco) !important;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2 !important;
 }
 
-/* Efeito hover nas linhas da tabela */
-#contactTableDesktop tbody tr:hover {
-  background-color: #f2f2f2;
-  transition: background-color 0.2s ease-in-out;
+/* Remove qualquer zebra striping (linhas alternadas) */
+#contactTableDesktop tbody tr,
+#contactTableDesktop tbody tr:nth-child(even),
+#contactTableDesktop tbody tr:nth-child(odd) {
+  background-color: var(--branco) !important;
+}
+
+/* Hover laranja claro nas linhas da tabela desktop - cobre todo o fundo do texto */
+table#contactTableDesktop > tbody > tr:hover > td {
+  background-color: #ffe5c2 !important;
+  transition: background-color 0.2s !important;
 }
 
 /* Campo de Pesquisa */
