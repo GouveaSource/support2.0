@@ -132,3 +132,7 @@ footer {
         white-space: nowrap; /* Evita quebra de linha do cabeçalho */
     }
 }
+
+select.form-select {
+  border-color: var(--laranja);
+}

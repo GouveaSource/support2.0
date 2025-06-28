@@ -6,19 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Suporte</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap, Bootstrap Icons, Google Fonts e CSS customizado -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/index.css">
   <link rel="icon" type="image/x-icon" href="images/Logo_ico.ico">
-
-
 </head>
 
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar fixa no topo com links para as principais páginas -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#" style="color: var(--laranja); font-weight: bold;">Suporte</a>
@@ -47,79 +45,78 @@
     </div>
   </nav>
 
-  <!-- Conteúdo -->
+  <!-- Conteúdo principal da página -->
   <main>
     <div class="section" style="margin-top: 80px;">
       <div class="container">
         <div class="row g-4">
 
-          <!-- Caixa 1 - Bem-vindo -->
+          <!-- Caixa 1 - Mensagem de boas-vindas e balões animados -->
           <div class="col-md-4">
             <div class="box position-relative">
               <h3>Bem-vindo ao Novo Portal de Suporte!</h3>
               <p>Estamos felizes em apresentar o novo ambiente de suporte para a equipe do Centro de Controle Operacional.
                 Aqui você encontrará contatos, endereços, informações sobre procedimentos de liberações e recados importantes.</p>
 
-              <!-- Balões -->
-              
+              <!-- Balões animados de fundo -->
               <div class="balloon" style="left:20%; background-color: var(--laranja); animation-delay: 0s;"></div>
               <div class="balloon" style="left:40%; background-color: var(--preto); animation-delay: 2s;"></div>
               <div class="balloon" style="left:60%; background-color: var(--laranja); animation-delay: 4s;"></div>
               <div class="balloon" style="left:30%; background-color: var(--branco); animation-delay: 1s;"></div>
               <div class="balloon" style="left:70%; background-color: var(--branco); animation-delay: 3s;"></div>
-              </div>
-            </div> 
-          
+            </div>
+          </div> 
 
-              <!-- Caixa 2 - Acesso Rápido -->
-              <div class="col-md-4">
-                <div class="box">
-                  <h3>Acesso Rápido</h3>
-                  <div class="botoes-centro">
-                    <a href="ramais.html" class="btn btn-laranja w-100">
-                      <i class="bi bi-telephone-forward"></i> Ramais
-                    </a>
-                    <a href="enderecos.html" class="btn btn-laranja w-100">
-                      <i class="bi bi-geo"></i> Endereços
-                    </a>
-                    <a href="outros.html" class="btn btn-laranja w-100">
-                      <i class="bi bi-list-ul"></i> Outros
-                    </a>
-                  </div>
-                </div>
+          <!-- Caixa 2 - Acesso rápido aos principais módulos -->
+          <div class="col-md-4">
+            <div class="box">
+              <h3>Acesso Rápido</h3>
+              <div class="botoes-centro">
+                <a href="ramais.html" class="btn btn-laranja w-100">
+                  <i class="bi bi-telephone-forward"></i> Ramais
+                </a>
+                <a href="enderecos.html" class="btn btn-laranja w-100">
+                  <i class="bi bi-geo"></i> Endereços
+                </a>
+                <a href="outros.html" class="btn btn-laranja w-100">
+                  <i class="bi bi-list-ul"></i> Outros
+                </a>
               </div>
-
-              <!-- Caixa 3 - Últimas Atualizações -->
-              <div class="col-md-4">
-                <div class="box d-flex flex-column justify-content-between">
-                  <div>
-                    <h3>Últimas Atualizações</h3>
-                    <ul class="list-unstyled">
-                      <li>✓ Aqui vamos ver as últimas novidades, uma parte para recados importantíssimos! Então estejam
-                        sempre atentos a esse campo, e depois no botão abaixo, ficarão todos os últimos recados.</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <a href="recados.html" class="btn btn-laranja mt-3 w-100">
-                      <i class="bi bi-bell"></i> Últimos Recados
-                    </a>
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
+
+          <!-- Caixa 3 - Últimas atualizações e recados -->
+          <div class="col-md-4">
+            <div class="box d-flex flex-column justify-content-between">
+              <div>
+                <h3>Últimas Atualizações</h3>
+                <ul class="list-unstyled">
+                  <li>✓ Aqui vamos ver as últimas novidades, uma parte para recados importantíssimos! Então estejam
+                    sempre atentos a esse campo, e depois no botão abaixo, ficarão todos os últimos recados.</li>
+                </ul>
+              </div>
+              <div>
+                <a href="recados.html" class="btn btn-laranja mt-3 w-100">
+                  <i class="bi bi-bell"></i> Últimos Recados
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
   </main>
 
-  <!-- Footer -->
+  <!-- Rodapé fixo -->
   <footer>
-  © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea. | <a href="politica-interna.html" style="color: var(--branco); text-decoration: none;">Política de Privacidade Interna</a>
-</footer>
+    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea. | <a href="politica-interna.html" style="color: var(--branco); text-decoration: none;">Política de Privacidade Interna</a>
+  </footer>
 
-  <!-- Bootstrap Bundle -->
+  <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+  <script>
+    // Script de proteção de acesso: só permite acesso se estiver logado e com política aceita
     document.addEventListener('DOMContentLoaded', function() {
       // Define o caminho da página de login e da política
       const loginPage = 'login.html';
@@ -148,7 +145,4 @@
     });
   </script>
 </body>
-</html>
-</body>
-
 </html>

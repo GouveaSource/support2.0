@@ -1,59 +1,59 @@
 :root {
-  --laranja: #F18407;
-  --preto: #000000;
-  --branco: #ffffff;
+  --laranja: #F18407; /* Cor principal (laranja institucional) */
+  --preto: #000000;   /* Cor de fundo navbar e footer */
+  --branco: #ffffff;  /* Cor de fundo principal */
 }
 
 html,
 body {
-  height: 100%;
+  height: 100%; /* Garante altura total para rodapé fixo */
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--branco);
-  color: var(--preto);
-  display: flex;
+  font-family: 'Poppins', sans-serif; /* Fonte principal */
+  background-color: var(--branco);    /* Fundo branco */
+  color: var(--preto);                /* Texto preto */
+  display: flex;                      /* Para rodapé fixo */
   flex-direction: column;
 }
 
 main {
-  flex: 1;
+  flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
 }
 
 .navbar {
-  background-color: var(--preto);
+  background-color: var(--preto); /* Navbar preta */
 }
 
 .nav-link {
-  color: var(--laranja) !important;
+  color: var(--laranja) !important; /* Links laranja */
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
   border-radius: 5px;
   padding: 8px 15px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 5px; /* Espaço entre ícone e texto */
 }
 
 .nav-link:hover {
-  background-color: var(--laranja);
+  background-color: var(--laranja); /* Hover laranja */
   color: var(--branco) !important;
 }
 
 .section {
-  padding: 60px 0;
+  padding: 60px 0; /* Espaçamento vertical das seções */
 }
 
 .box {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Fundo dos cards */
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 30px;
   text-align: center;
   height: 100%;
-  position: relative;
-  overflow: hidden;
+  position: relative; /* Necessário para balões animados */
+  overflow: hidden;   /* Esconde balões fora do card */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,7 +65,7 @@ main {
   border-radius: 50% 50% 50% 50%;
   position: absolute;
   bottom: 0;
-  animation: rise 6s linear infinite;
+  animation: rise 6s linear infinite; /* Animação de subida */
   opacity: 0.8;
 }
 
@@ -85,7 +85,6 @@ main {
     transform: translateY(0) scale(1);
     opacity: 0.8;
   }
-
   100% {
     transform: translateY(-400px) scale(1.2);
     opacity: 0;
@@ -93,7 +92,7 @@ main {
 }
 
 .btn-laranja {
-  background-color: var(--laranja);
+  background-color: var(--laranja); /* Botão laranja */
   color: var(--branco);
   font-weight: bold;
   border: none;
@@ -101,7 +100,7 @@ main {
 }
 
 .btn-laranja:hover {
-  background-color: #d97305;
+  background-color: #d97305; /* Hover mais escuro */
   color: var(--branco);
 }
 
@@ -110,11 +109,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 10px; /* Espaço entre botões */
 }
 
 footer {
-  background-color: var(--preto);
+  background-color: var(--preto); /* Rodapé preto */
   color: var(--branco);
   padding: 15px 0;
   text-align: center;
