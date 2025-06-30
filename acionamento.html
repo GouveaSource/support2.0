@@ -56,9 +56,10 @@
                     <option value="p12">PRESIDENTE PRUDENTE</option>
                     <option value="p13">SANTANA</option>
                     <option value="p14">S.J. DO RIO PRETO</option>
-                    <option value="p15">SOROCABA</option>
-                    <option value="p16">TEODORO SAMPAIO</option>
-                    <option value="p17">UBATUBA</option>
+                    <option value="p15">SÃO VICENTE</option>
+                    <option value="p16">SOROCABA</option>
+                    <option value="p17">TEODORO SAMPAIO</option>
+                    <option value="p18">UBATUBA</option>
                 </select>
 
                 <!-- Pesquisa -->
@@ -938,8 +939,93 @@
                             </tbody>
                         </table>
                     </div>
-                    <!-- Tabelas por Pátio == SOROCABA == -->
+                    <!-- Tabelas por Pátio == SÃO VICENTE == -->
                     <div id="p15" class="patio-table hidden">
+                        <h4>SÃO VICENTE</h4>
+                        <table class="table responsive-table-cards">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Contato</th>
+                                    <th>Reboque</th>
+                                    <th>Cidades</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Nome">Litoral Guincho</td>
+                                    <td data-label="Motoristas">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalMotoristasLitoralGuincho">
+                                            Ver Motoristas
+                                        </button>
+                                    </td>
+                                    <td data-label="Contato">(13) 99204-8672</td>
+                                    <td data-label="Reboque">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalPlacasLitoralGuincho">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td data-label="Cidades">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalCidadesLitoralGuincho">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nome">Leandro</td>
+                                    <td data-label="Motoristas">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalMotoristasLeandroSV">
+                                            Ver Motoristas
+                                        </button>
+                                    </td>
+                                    <td data-label="Contato">(13) 98864-4564</td>
+                                    <td data-label="Reboque">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalPlacasLeandroSV">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td data-label="Cidades">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalCidadesLeandroSV">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nome">André Luiz de Sousa Pivato</td>
+                                    <td data-label="CPF">333.937.718-92</td>
+                                    <td data-label="Contato">(13) 99777-7020</td>
+                                    <td data-label="Reboque">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalPlacasAndreLuizSousa">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td data-label="Cidades">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalCidadesAndreLuisSousa">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Nome">Marcelo Martins Schiavo</td>
+                                    <td data-label="CPF">218.673.628-48</td>
+                                    <td data-label="Contato">(13) 99156-4696</td>
+                                    <td data-label="Reboque">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalPlacasMArceloSchiavo">
+                                            Ver Placas
+                                        </button>
+                                    </td>
+                                    <td data-label="Cidades">
+                                        <button class="btn btn-laranja btn-sm" data-bs-toggle="modal" data-bs-target="#modalCidadesMarceloSchiavo">
+                                            Ver Cidades
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Tabelas por Pátio == SOROCABA == -->
+                    <div id="p16" class="patio-table hidden">
                         <h4>SOROCABA</h4>
                         <table class="table responsive-table-cards">
                             <thead>
@@ -1051,6 +1137,57 @@
                     <li>Kleber Aparecido Teodoro <span style='color: var(--cinza);'>(299.043.868-89)</span></li>
                     <li>Rodrigo Nonato De Almeida <span style='color: var(--cinza);'>(338.365.718-38)</span></li>
                     <li>Willian Fortunato Dos Santos <span style='color: var(--cinza);'>(396.940.028-77)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--  SÃO VICENTE -->
+    <!-- Litoral Guincho -->
+    <div class="modal fade" id="modalMotoristasLitoralGuincho" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Motoristas Credenciados - Litoral Guincho</h5>
+                <ul>
+                    <li>Alex Sandro Santos Da Silva <span style='color: var(--cinza);'>(300.726.538-09)</span></li>
+                    <li>Davidson Aparecido Ribeiro <span style='color: var(--cinza);'>(349.154.798-97)</span></li>
+                    <li>Davidson Tadeu Ribeiro <span style='color: var(--cinza);'>(426.191.958-37)</span></li>
+                    <li>Eduardo Pini Martins <span style='color: var(--cinza);'>(384.379.558-40)</span></li>
+                    <li>Fabio Da Silva Pereira <span style='color: var(--cinza);'>(296.041.588-48)</span></li>
+                    <li>Flávio Roderley Antônio <span style='color: var(--cinza);'>(140.442.078-95)</span></li>
+                    <li>Gustavo Silva D Almeida Pinto <span style='color: var(--cinza);'>(480.777.328-36)</span></li>
+                    <li>Hiago Da Silva Nascimento <span style='color: var(--cinza);'>(416.523.978-09)</span></li>
+                    <li>Jefferson Christiano Ribeiro <span style='color: var(--cinza);'>(290.588.698-65)</span></li>
+                    <li>Marcos Antônio Alves Do Prado <span style='color: var(--cinza);'>(416.202.518-50)</span></li>
+                    <li>Marcos Antonio Bezerra Da Silva <span style='color: var(--cinza);'>(255.347.028-26)</span></li>
+                    <li>Otávio Silva Santos <span style='color: var(--cinza);'>(403.999.638-04)</span></li>
+                    <li>Paulo Henrique Da S. P. De Jesus <span style='color: var(--cinza);'>(461.857.838-60)</span></li>
+                    <li>Rafael Cardoso Dos Santos <span style='color: var(--cinza);'>(459.593.988-42)</span></li>
+                    <li>Renan Piaggi Rodrigues <span style='color: var(--cinza);'>(348.938.358-31)</span></li>
+                    <li>Roberto Da Silva <span style='color: var(--cinza);'>(427.388.958-75)</span></li>
+                    <li>Rodrigo Almeida Da Silva <span style='color: var(--cinza);'>(431.407.218-03)</span></li>
+                    <li>Rodrigo Da Silva Pereira <span style='color: var(--cinza);'>(269.942.558-32)</span></li>
+                    <li>Sérgio Ricardo Pereira Da Silva <span style='color: var(--cinza);'>(318.386.538-64)</span></li>
+                    <li>Vinicius Fernandez L. De Lá Vega <span style='color: var(--cinza);'>(415.972.978-95)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Leandro -->
+    <div class="modal fade" id="modalMotoristasLeandroSV" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Motoristas Credenciados - Leandro</h5>
+                <ul>
+                    <li>Aquila dos Santos Rodrigues <span style='color: var(--cinza);'>(366.975.258-78)</span></li>
+                    <li>Danny Patrick dos Santos <span style='color: var(--cinza);'>(366.532.048-80)</span></li>
+                    <li>Edinaldo Amaro dos Santos <span style='color: var(--cinza);'>(805.950.304-91)</span></li>
+                    <li>Felipe Gabriel Santos <span style='color: var(--cinza);'>(428.770.798-21)</span></li>
+                    <li>Genivaldo Cosme de Oliveira <span style='color: var(--cinza);'>(306.672.358-50)</span></li>
+                    <li>Leandro Santos <span style='color: var(--cinza);'>(197.482.418-74)</span></li>
+                    <li>Leandro Souza Conde <span style='color: var(--cinza);'>(316.309.808-89)</span></li>
+                    <li>Lucas Bispo Silva Santos <span style='color: var(--cinza);'>(480.018.028-76)</span></li>
+                    <li>Thiago Cardoso Tavares <span style='color: var(--cinza);'>(284.532.018-38)</span></li>
                 </ul>
             </div>
         </div>
@@ -1770,7 +1907,52 @@
         </div>
     </div>
 
-    <!-- ===================== MODAIS DE SOROCABA ===================== -->
+    <!-- ===================== MODAIS DE SÃO VICENTE ===================== -->
+    <!-- Modal cidades de Litoral Guincho -->
+    <div class="modal fade" id="modalCidadesLitoralGuincho" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Litoral Guincho</h5>
+                <ul>
+                    <li>São Vicente</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal cidades de Leandro -->
+    <div class="modal fade" id="modalCidadesLeandroSV" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Leandro</h5>
+                <ul>
+                    <li>São Vicente</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal cidades de Marcelo Martins Schiavo -->
+    <div class="modal fade" id="modalCidadesMarceloSchiavo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por Marcelo Martins Schiavo</h5>
+                <ul>
+                    <li>São Vicente</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal cidades de André Luiz de Sousa Pivato -->
+    <div class="modal fade" id="modalCidadesAndreLuisSousa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Cidades atendidas por André Luiz de Sousa Pivato</h5>
+                <ul>
+                    <li>São Vicente</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -2318,7 +2500,75 @@
         </div>
     </div>
 
-    <!-- ===================== MODAIS DE PLACAS DE SOROCABA ===================== -->
+    <!-- ===================== MODAIS DE PLACAS DE SÃO VICENTE ===================== -->
+    <!-- Litoral Guincho -->
+    <div class="modal fade" id="modalPlacasLitoralGuincho" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos - Litoral Guincho</h5>
+                <ul>
+                    <li>BSC5H93 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>BRN8B34 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>IZC3E88 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>EPK6F94 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>EWJ4268 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>FIX4C36 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>CVL9D08 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>TLO2G09 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>CQC3F71 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>FPH4D56 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>FYV5E64 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>FMA8C01 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>EFV9H22 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>GDA5F75 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                    <li>SWU5C26 <!-- <span style="color: var(--cinza);">(Ficticio1)</span> --></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Leandro -->
+    <div class="modal fade" id="modalPlacasLeandroSV" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos - Leandro Souza</h5>
+                <ul>
+                    <li>DSH4I87 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>FFO6A36 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>BPQ2B98 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>PNL7C68 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>RGK8J30 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>CUD2H58 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>FUV8E06 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                    <li>TKF9H10 <!-- <span style="color: var(--cinza);">(Fictício)</span> --></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de André Luiz de Sousa Pivato -->
+    <div class="modal fade" id="modalPlacasAndreLuizSousa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos - André Luiz de Sousa Pivato</h5>
+                <ul>
+                    <li>DVT-1E37 <span style="color: var(--cinza);">(AX0R 1933 S)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal placas de Marcelo Martins Schiavo -->
+    <div class="modal fade" id="modalPlacasMArceloSchiavo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <h5 class="modal-title">Placas e Modelos - Marcelo Martins Schiavo</h5>
+                <ul>
+                    <li>GQF-1938 <span style="color: var(--cinza);">(NL12 360 4X2)</span></li>
+                    <li>BWQ-8E91 <span style="color: var(--cinza);">(T112 H)</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
