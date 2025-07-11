@@ -113,36 +113,50 @@
       }
     });
   </script>
+
+  <!-- Modal flutuante de aceite de termos -->
+  <style>
+    @media (max-width: 600px) {
+      #policyModal {
+        min-width: 90vw !important;
+        max-width: 98vw !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        padding: 12px 6px !important;
+      }
+      #policyModal span {
+        font-size: 0.98em !important;
+      }
+      #acceptPolicyBtn {
+        min-width: 90px !important;
+        padding: 8px 10px !important;
+        font-size: 1em !important;
+      }
+    }
+  </style>
+  <div id="policyModal" style="display:none; position:fixed; left:50%; bottom:40px; transform:translateX(-50%); z-index:1050; min-width:320px; max-width:90vw; background:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:16px 20px; border:1px solid #eee; text-align:left;">
+    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+      <span style="color:#333; font-size:1.05em; flex:1;">
+        Ao continuar navegando, você concorda com a nossa 
+        <a href='politica-interna.html' target='_blank'>Política de Privacidade Interna</a>.
+      </span>
+      <button id="acceptPolicyBtn" style="white-space:nowrap; min-width:120px; background-color: #f18407; color: #fff; font-weight: bold; border: none; border-radius: 6px; padding: 8px 20px; transition: background-color 0.3s;">OK</button>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Define o caminho da página de login e da política
-      const loginPage = 'login.html';
-      const policyPage = 'politica-interna.html';
-
-      // Pega o caminho atual da URL
-      const currentPath = window.location.pathname.split('/').pop();
-
-      // Verifica se o usuário está logado (pela flag no localStorage)
-      const isLoggedIn = localStorage.getItem('loggedIn');
-      // Verifica se a política foi aceita
+      const policyModal = document.getElementById('policyModal');
+      const acceptBtn = document.getElementById('acceptPolicyBtn');
       const policyAccepted = localStorage.getItem('policyAccepted');
-
-      // Se o usuário NÃO estiver logado E não estiver na página de login ou política, redireciona para o login
-      if (!isLoggedIn && currentPath !== loginPage && currentPath !== policyPage) {
-        window.location.href = loginPage;
-        return; // Sai da função para evitar processamento desnecessário
+      if (!policyAccepted) {
+        policyModal.style.display = 'block';
       }
-
-      // Se o usuário estiver logado, mas a política AINDA NÃO foi aceita, redireciona para a página da política
-      // Isso acontecerá uma única vez, no primeiro acesso após o login
-      if (isLoggedIn && !policyAccepted && currentPath !== policyPage) {
-        window.location.href = policyPage;
-        return; // Sai da função
-      }
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('policyAccepted', 'true');
+        policyModal.style.display = 'none';
+      });
     });
   </script>
 </body>
-</html>
-</body>
-
 </html>
