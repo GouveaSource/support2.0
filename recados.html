@@ -140,6 +140,26 @@
       margin-top: 0;
       flex-shrink: 0;
     }
+
+    /* Estilo do botão de aceitar política */
+    .btn-laranja {
+      background-color: var(--laranja);
+      color: var(--branco);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-laranja:hover {
+      background-color: #d47306;
+    }
   </style>
   <link rel="icon" type="image/x-icon" href="images/Logo_ico.ico">
 </head>
@@ -177,31 +197,29 @@
     © 2025 Grupo Carvalho.
   </footer>
 
+  <!-- Modal flutuante de aceite de termos -->
+  <div id="policyModal" style="display:none; position:fixed; left:50%; bottom:40px; transform:translateX(-50%); z-index:1050; min-width:320px; max-width:90vw; background:#fff; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.18); padding:16px 20px; border:1px solid #eee; text-align:left;">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span style="color:#333; font-size:1.05em; flex:1;">
+        Ao continuar navegando, você concorda com a nossa 
+        <a href='politica-interna.html' target='_blank'>Política de Privacidade Interna</a>.
+      </span>
+      <button id="acceptPolicyBtn" class="btn btn-laranja" style="white-space:nowrap;">OK</button>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const loginPage = 'login.html';
-      const policyPage = 'politica-interna.html';
-      const currentPath = window.location.pathname.split('/').pop();
-
-      // Verifica se o usuário está logado usando localStorage
-      const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
-      // Verifica se a política foi aceita usando localStorage
-      const policyAccepted = localStorage.getItem('policyAccepted') === 'true';
-
-      // Se o usuário NÃO estiver logado E não estiver na página de login ou política:
-      // Redireciona para a página de login.
-      if (!isLoggedIn && currentPath !== loginPage && currentPath !== policyPage) {
-        window.location.href = loginPage;
-        return;
+      const policyModal = document.getElementById('policyModal');
+      const acceptBtn = document.getElementById('acceptPolicyBtn');
+      const policyAccepted = localStorage.getItem('policyAccepted');
+      if (!policyAccepted) {
+        policyModal.style.display = 'block';
       }
-
-      // Se o usuário ESTIVER logado, mas a política AINDA NÃO foi aceita,
-      // E não estiver na página da política:
-      // Redireciona para a página da política.
-      if (isLoggedIn && !policyAccepted && currentPath !== policyPage) {
-        window.location.href = policyPage;
-        return;
-      }
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('policyAccepted', 'true');
+        policyModal.style.display = 'none';
+      });
     });
   </script>
 </body>

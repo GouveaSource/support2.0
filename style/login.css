@@ -1,0 +1,34 @@
+
+    /* Estilos específicos para a página de login */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Garante que ocupe a altura total da tela */
+      background-color: var(--branco); /* Fundo branco ou cor suave */
+    }
+    .login-container {
+      background-color: #f8f9fa; /* Cor de fundo da caixa de login */
+      border: 1px solid #ddd; /* Borda suave */
+      border-radius: 10px; /* Cantos arredondados */
+      padding: 40px; /* Espaçamento interno */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      width: 100%;
+      max-width: 400px; /* Largura máxima para a caixa de login */
+    }
+    .form-control:focus {
+      border-color: var(--laranja); /* Borda laranja ao focar */
+      box-shadow: 0 0 0 0.25rem rgba(241, 132, 7, 0.25); /* Sombra laranja ao focar */
+    }
+    .btn-laranja {
+      background-color: var(--laranja);
+      color: var(--branco);
+      font-weight: bold;
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .btn-laranja:hover {
+      background-color: #d97305; /* Laranja mais escuro no hover */
+      color: var(--branco);
+    }
+ 
