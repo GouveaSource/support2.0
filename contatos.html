@@ -43,13 +43,13 @@
       <div class="container">
         <div class="card">
           <h2 class="text-center mb-4">Lista de Contatos</h2>
-          
+
           <div class="search-bar d-none d-md-block">
             <input type="text" id="searchInput" class="form-control" placeholder="Digite para pesquisar...">
           </div>
 
           <button id="backToContactsBtn" class="btn back-button-mobile d-flex align-items-center d-none">
-              <i class="bi bi-arrow-left me-2"></i> Voltar
+            <i class="bi bi-arrow-left me-2"></i> Voltar
           </button>
 
           <div id="contentViewsContainer">
@@ -64,24 +64,24 @@
                 </tr>
               </thead>
               <tbody>
-                </tbody>
+              </tbody>
             </table>
 
             <div id="contactCardGridMobile" class="contact-card-grid-mobile d-md-none">
-              </div>
+            </div>
 
             <div id="contactDetailsContainer" style="display: none;">
               <div class="contact-card-mobile">
-                  <h5 class="mb-3" id="detailsPatioName"></h5>
-                  <p><strong>Telefone:</strong> <span id="detailsTelefone"></span></p>
-                  <p><strong>Ramal:</strong> <span id="detailsRamal"></span></p>
-                  <p><strong>Administrador:</strong> <span id="detailsAdministrador"></span></p>
-                  <div class="mt-3">
-                      <button class="icon-btn" onclick="copyDetailsContato()">
-                          <i class="bi bi-files" style="color: var(--laranja); font-size: 1.5rem;"></i> Copiar Detalhes
-                      </button>
-                      <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
-                  </div>
+                <h5 class="mb-3" id="detailsPatioName"></h5>
+                <p><strong>Telefone:</strong> <span id="detailsTelefone"></span></p>
+                <p><strong>Ramal:</strong> <span id="detailsRamal"></span></p>
+                <p><strong>Administrador:</strong> <span id="detailsAdministrador"></span></p>
+                <div class="mt-3">
+                  <button class="icon-btn" onclick="copyDetailsContato()">
+                    <i class="bi bi-files" style="color: var(--laranja); font-size: 1.5rem;"></i> Copiar Detalhes
+                  </button>
+                  <span class="ms-2 text-success copiado" style="visibility: hidden;">Copiado!</span>
+                </div>
               </div>
             </div>
           </div>
@@ -91,9 +91,11 @@
   </main>
 
   <footer>
-    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea. | <a href="politica-interna.html" style="color: var(--branco); text-decoration: none;">Política de Privacidade Interna</a>
+    © 2025 Grupo Carvalho. Todos os direitos reservados.<br>Desenvolvido por Raul Gouvea. | <a
+      href="politica-interna.html" style="color: var(--branco); text-decoration: none;">Política de Privacidade
+      Interna</a>
   </footer>
-  
+
   <!-- Modal flutuante de aceite de termos -->
   <style>
     @media (max-width: 600px) {
@@ -104,14 +106,17 @@
         transform: translateX(-50%) !important;
         padding: 12px 6px !important;
       }
+
       #policyModal span {
         font-size: 0.98em !important;
       }
+
       #acceptPolicyBtn {
         min-width: 90px !important;
         padding: 8px 10px !important;
         font-size: 1em !important;
       }
+
       body.policy-modal-open {
         overflow: hidden !important;
         height: 100vh !important;
@@ -120,18 +125,21 @@
       }
     }
   </style>
-  <div id="policyModal" style="display:none; position:fixed; left:50%; bottom:40px; transform:translateX(-50%); z-index:1050; min-width:320px; max-width:90vw; background:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:16px 20px; border:1px solid #eee; text-align:left;">
+  
+  <div id="policyModal"
+    style="display:none; position:fixed; left:50%; bottom:40px; transform:translateX(-50%); z-index:1050; min-width:320px; max-width:90vw; background:#fff; border-radius:12px; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:16px 20px; border:1px solid #eee; text-align:left;">
     <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
       <span style="color:#333; font-size:1.05em; flex:1;">
-        Ao continuar navegando, você concorda com a nossa 
+        Ao continuar navegando, você concorda com a nossa
         <a href='politica-interna.html' target='_blank'>Política de Privacidade Interna</a>.
       </span>
-      <button id="acceptPolicyBtn" style="white-space:nowrap; min-width:120px; background-color: #f18407; color: #fff; font-weight: bold; border: none; border-radius: 6px; padding: 8px 20px; transition: background-color 0.3s;">OK</button>
+      <button id="acceptPolicyBtn"
+        style="white-space:nowrap; min-width:120px; background-color: #f18407; color: #fff; font-weight: bold; border: none; border-radius: 6px; padding: 8px 20px; transition: background-color 0.3s;">OK</button>
     </div>
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const policyModal = document.getElementById('policyModal');
       const acceptBtn = document.getElementById('acceptPolicyBtn');
       const policyAccepted = localStorage.getItem('policyAccepted');
@@ -148,13 +156,13 @@
         policyModal.style.display = 'block';
         setBodyLock(true);
       }
-      acceptBtn.addEventListener('click', function() {
+      acceptBtn.addEventListener('click', function () {
         localStorage.setItem('policyAccepted', 'true');
         policyModal.style.display = 'none';
         setBodyLock(false);
       });
       // Remove o lock se redimensionar e o modal não estiver visível
-      window.addEventListener('resize', function() {
+      window.addEventListener('resize', function () {
         if (policyModal.style.display === 'none') {
           setBodyLock(false);
         }
@@ -185,7 +193,7 @@
       { patio: "São José do Rio Preto", telefone: "(17)99784-0491", ramal: "212", administrador: "Luis" },
       { patio: "São José dos Pinhais", telefone: "(41)99963-0138", ramal: "201", administrador: "Diego" },
       { patio: "São Vicente", telefone: "(14)99857-3641", ramal: "232", administrador: "Lucas" },
-      { patio: "Serrana", telefone: "(14)99136-5391", ramal: "-", administrador: "Gabi"},
+      { patio: "Serrana", telefone: "(14)99136-5391", ramal: "-", administrador: "Gabi" },
       { patio: "Sorocaba", telefone: "(15)99632-5535", ramal: "225", administrador: "Priscila" },
       { patio: "Teodoro Sampaio", telefone: "(18)99711-2249", ramal: "224", administrador: "Dina" },
       { patio: "Ubatuba", telefone: "(12)99682-7480", ramal: "108", administrador: "Karice" },
@@ -217,6 +225,9 @@
             <td data-label="Ramal">${dado.ramal}</td>
             <td data-label="Administrador">${dado.administrador}</td>
             <td data-label="Ações">
+              <button class="icon-btn" onclick="openWhatsApp(event, '${dado.telefone}')">
+                <i class="bi bi-whatsapp" style="color: var(--laranja);"></i>
+              </button>
               <button class="icon-btn" onclick="copyContato(event, ${index})">
                 <i class="bi bi-files" style="color: var(--laranja);"></i>
               </button>
@@ -239,7 +250,7 @@
           const cardItem = document.createElement("div");
           cardItem.classList.add("contact-simple-card-item");
           // CORREÇÃO AQUI: Apenas o nome do pátio no card simples
-          cardItem.textContent = dado.patio; 
+          cardItem.textContent = dado.patio;
           cardItem.onclick = () => showContactDetails(index); // Ao clicar no card, mostra os detalhes
 
           contactCardGridMobile.appendChild(cardItem);
@@ -261,7 +272,7 @@
 
       // Decide qual visualização principal mostrar (tabela ou grid de cards simples)
       if (isMobile) {
-        contactCardGridMobile.style.display = 'grid'; 
+        contactCardGridMobile.style.display = 'grid';
         renderMobileContactCards(filterText);
       } else {
         contactTableDesktop.style.display = 'table';
@@ -282,7 +293,7 @@
       // Esconde as visualizações de lista (desktop e mobile)
       contactTableDesktop.style.display = 'none';
       contactCardGridMobile.style.display = 'none';
-      
+
       // Exibe os detalhes e aplica a animação de entrada
       contactDetailsContainer.style.display = 'block';
       const contactCardElement = contactDetailsContainer.querySelector('.contact-card-mobile');
@@ -300,7 +311,7 @@
     // Função para ocultar os detalhes e voltar para a lista com animação
     function hideContactDetails() {
       const contactCardElement = contactDetailsContainer.querySelector('.contact-card-mobile');
-      
+
       // Inicia a animação de saída
       contactCardElement.classList.remove('show'); // Remove a classe de visibilidade
       contactCardElement.classList.add('hide-left'); // Adiciona a classe para mover para a esquerda
@@ -309,13 +320,23 @@
       setTimeout(() => {
         contactDetailsContainer.style.display = 'none'; // Oculta o container de detalhes
         contactCardElement.classList.remove('hide-left'); // Limpa a classe de saída para próxima entrada
-        
+
         backToContactsBtn.classList.remove('d-flex');
         backToContactsBtn.classList.add('d-none'); // Oculta o botão de voltar
 
         showCurrentView(); // Mostra a visualização de lista correta (desktop ou mobile)
       }, 400); // Deve ser igual à duração da transição CSS (.contact-card-mobile transition)
     }
+
+    // Função para abrir o WhatsApp com o número do contato
+    function openWhatsApp(event, telefone) {
+      event.stopPropagation(); // Impede a propagação do evento para a linha
+      // Remove caracteres não numéricos do telefone
+      const phoneNumber = telefone.replace(/\D/g, '');
+      const whatsappUrl = `https://wa.me/55${phoneNumber}`; // Assumindo que todos os números são do Brasil (+55)
+      window.open(whatsappUrl, '_blank');
+    }
+
 
     // Função para copiar os detalhes do contato (usada nos botões)
     function copyContato(event, index) {
@@ -391,4 +412,5 @@
     // Modal de aceite de política permanece, mas sem bloqueio de acesso
   </script>
 </body>
+
 </html>
